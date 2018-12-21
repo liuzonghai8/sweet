@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="sweet-common" />
         <module name="sweet-gateway" />
         <module name="sweet-registry" />
         <module name="sweet-upms-interface" />
