@@ -10,6 +10,6 @@ public class User {
     @Id
     @KeySql(useGeneratedKeys = true)
     int id;
-    String username;
+    String name;
     String phone;
 }
