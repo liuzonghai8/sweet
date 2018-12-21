@@ -1,10 +1,15 @@
 package com.sea.upms.pojo;
 
+import lombok.Data;
+import tk.mybatis.mapper.annotation.KeySql;
 
+import javax.persistence.Id;
+
+@Data
 public class User {
-
-
-    int user_id;
+    @Id
+    @KeySql(useGeneratedKeys = true)
+    int id;
     String username;
     String phone;
 }

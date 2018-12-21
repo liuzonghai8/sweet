@@ -7,9 +7,9 @@ spring:
     url: jdbc:mysql://localhost:3306/zheng
     username: post
     password: 123456
-    #hikari:
-    #  maximum-pool-size: 30
-    #  minimum-idle: 10
+    hikari:
+      maximum-pool-size: 30
+      minimum-idle: 10
 eureka:
   client:
     service-url:
