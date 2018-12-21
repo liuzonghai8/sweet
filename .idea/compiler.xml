@@ -9,6 +9,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="sweet-gateway" />
         <module name="sweet-registry" />
+        <module name="sweet-upms-interface" />
+        <module name="sweet-upms-service" />
       </profile>
     </annotationProcessing>
   </component>

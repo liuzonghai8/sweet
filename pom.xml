@@ -10,6 +10,7 @@
     <modules>
         <module>sweet-registry</module>
         <module>sweet-gateway</module>
+        <module>sweet-upms</module>
     </modules>
     <packaging>pom</packaging>
     <parent>
