@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4593fd3-eaa9-4f0b-b01a-ca808057d44e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/doing.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/git-learn.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sweet-gateway/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sweet-gateway/src/main/java/com/sea/gareway/SweetGateway.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sweet-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sweet-registry/src/main/java/com/sea/registry/SweetRegistry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sweet-registry/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reme.txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -27,16 +18,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SweetGateway.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SweetGateway.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sweet-gateway/src/main/java/com/sea/gareway/SweetGateway.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+            <state relative-caret-position="378">
+              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#366#367#0" expanded="true" />
                 <element signature="e#384#385#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1026">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
             </state>
           </provider>
         </entry>
@@ -82,6 +82,7 @@
         <option value="$PROJECT_DIR$/sweet-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/sweet-gateway/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/sweet-gateway/src/main/java/com/sea/gareway/SweetGateway.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -118,11 +119,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="355" />
-    <option name="y" value="42" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="854" />
-    <option name="height" value="1027" />
+    <option name="height" value="920" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -144,75 +145,7 @@
             <path>
               <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
               <item name="sweet" type="462c0819:PsiDirectoryNode" />
-              <item name="sweet-gateway" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sweet" type="462c0819:PsiDirectoryNode" />
-              <item name="sweet-gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sweet" type="462c0819:PsiDirectoryNode" />
-              <item name="sweet-gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sweet" type="462c0819:PsiDirectoryNode" />
-              <item name="sweet-gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sweet" type="462c0819:PsiDirectoryNode" />
-              <item name="sweet-gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gareway" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sweet" type="462c0819:PsiDirectoryNode" />
-              <item name="sweet-gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sweet" type="462c0819:PsiDirectoryNode" />
               <item name="sweet-registry" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sweet" type="462c0819:PsiDirectoryNode" />
-              <item name="sweet-registry" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sweet" type="462c0819:PsiDirectoryNode" />
-              <item name="sweet-registry" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sweet" type="462c0819:PsiDirectoryNode" />
-              <item name="sweet-registry" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -332,7 +265,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1545368323212</updated>
-      <workItem from="1545368324412" duration="1964000" />
+      <workItem from="1545368324412" duration="2506000" />
     </task>
     <task id="LOCAL-00001" summary="create registry">
       <created>1545369121971</created>
@@ -345,7 +278,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1964000" />
+    <option name="totallyTimeSpent" value="2506000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
@@ -359,7 +292,7 @@
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
       <window_info anchor="right" id="Database" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Structure" order="1" sideWeight="0.5010352" side_tool="true" weight="0.19797687" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -369,13 +302,13 @@
       <window_info id="Image Layers" />
       <window_info anchor="bottom" id="Java Enterprise" />
       <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49927744" visible="true" weight="0.32916668" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49927744" weight="0.32916668" />
       <window_info anchor="bottom" id="Version Control" weight="0.32916668" />
       <window_info anchor="bottom" id="Spring" sideWeight="0.49927744" weight="0.32916668" />
-      <window_info anchor="bottom" id="Terminal" sideWeight="0.49927744" weight="0.32916668" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19797687" />
+      <window_info anchor="bottom" id="Terminal" sideWeight="0.49927744" visible="true" weight="0.32916668" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49896482" visible="true" weight="0.19797687" />
       <window_info anchor="right" id="Bean Validation" />
-      <window_info id="Web" side_tool="true" />
+      <window_info id="Web" sideWeight="0.5010352" side_tool="true" weight="0.19797687" />
       <window_info anchor="right" id="Theme Preview" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -481,13 +414,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sweet-gateway/src/main/java/com/sea/gareway/SweetGateway.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+        <state relative-caret-position="378">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#366#367#0" expanded="true" />
             <element signature="e#384#385#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1026">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
     </entry>
