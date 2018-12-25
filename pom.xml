@@ -12,6 +12,7 @@
         <module>sweet-gateway</module>
         <module>sweet-upms</module>
         <module>sweet-common</module>
+        <module>sweet-consult</module>
     </modules>
     <packaging>pom</packaging>
     <parent>
