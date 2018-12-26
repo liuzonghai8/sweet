@@ -5,6 +5,7 @@ package com.sea.consult.pojo;
 import lombok.Data;
 import tk.mybatis.mapper.annotation.KeySql;
 
+import javax.persistence.Column;
 import javax.persistence.Id;
 import java.util.Date;
 
@@ -14,8 +15,10 @@ public class ConsultationRecord {
    @Id
    @KeySql(useGeneratedKeys = true)
    public Long id;
+   @Column(name="problem_description")
    public String problemDescription;
    public String processingMethod;
+   @Column(name="consult_department")
    public String consultDepartment;
    public String brandModel;
    public String systemPlatform;
