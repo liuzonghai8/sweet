@@ -8,6 +8,6 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 @EnableEurekaServer
 public class SweetRegistry {
     public static void main(String[] args) {
-        SpringApplication.run(SweetRegistry.class, args);
+        SpringApplication.run(SweetRegistry.class);
     }
 }
