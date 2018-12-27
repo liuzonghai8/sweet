@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4593fd3-eaa9-4f0b-b01a-ca808057d44e" name="Default" comment="create registry">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sweet-gateway/src/main/java/com/sea/gareway/config/GlobalCorsConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet-consult/sweet-consult-interface/src/main/java/com/sea/consult/pojo/ConsultationRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-consult/sweet-consult-interface/src/main/java/com/sea/consult/pojo/ConsultationRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet-consult/sweet-consult-service/src/main/java/com/sea/consult/service/ConsultationRecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-consult/sweet-consult-service/src/main/java/com/sea/consult/service/ConsultationRecordService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet-consult/sweet-consult-service/src/main/java/com/sea/consult/web/ConsultationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-consult/sweet-consult-service/src/main/java/com/sea/consult/web/ConsultationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet-consult/sweet-consult-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-consult/sweet-consult-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet-consult/sweet-consult-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-consult/sweet-consult-service/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet-gateway/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-gateway/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet-registry/src/main/java/com/sea/registry/SweetRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-registry/src/main/java/com/sea/registry/SweetRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet-registry/target/classes/com/sea/registry/SweetRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-registry/target/classes/com/sea/registry/SweetRegistry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -65,12 +54,8 @@
       <file leaf-file-name="ConsultationController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sweet-consult/sweet-consult-service/src/main/java/com/sea/consult/web/ConsultationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
+            <state relative-caret-position="756">
               <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
-              <folding>
-                <element signature="e#889#890#0" expanded="true" />
-                <element signature="e#941#942#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -78,12 +63,10 @@
       <file leaf-file-name="ConsultationRecordService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sweet-consult/sweet-consult-service/src/main/java/com/sea/consult/service/ConsultationRecordService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
+            <state relative-caret-position="27">
               <caret line="36" column="126" selection-start-line="36" selection-start-column="126" selection-end-line="36" selection-end-column="126" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#651#652#0" expanded="true" />
-                <element signature="e#677#678#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -166,7 +149,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="355" />
     <option name="y" value="42" />
     <option name="width" value="854" />
@@ -181,6 +164,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -193,7 +177,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -201,6 +184,8 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../leyou-master/leyou-master" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -307,7 +292,9 @@
       <workItem from="1545368324412" duration="11822000" />
       <workItem from="1545387228410" duration="4071000" />
       <workItem from="1545712419898" duration="1764000" />
-      <workItem from="1545787947229" duration="13858000" />
+      <workItem from="1545787947229" duration="14198000" />
+      <workItem from="1545818815411" duration="28000" />
+      <workItem from="1545899901934" duration="546000" />
     </task>
     <task id="LOCAL-00001" summary="create registry">
       <created>1545369121971</created>
@@ -320,11 +307,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31515000" />
+    <option name="totallyTimeSpent" value="32429000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="7" />
     <layout>
       <window_info anchor="right" id="PlantUML" order="3" weight="0.32947975" />
       <window_info anchor="right" id="Palette" order="3" />
@@ -339,17 +325,16 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32916668" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32819074" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" weight="0.32819074" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" sideWeight="0.49927744" visible="true" weight="0.5483871" />
+      <window_info anchor="bottom" id="Run Dashboard" order="8" sideWeight="0.49927744" weight="0.5483871" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32819074" />
       <window_info anchor="bottom" auto_hide="true" x="28" y="311" width="1384" height="237" id="Run" order="2" sideWeight="0.49927744" type="SLIDING" weight="0.5126405" />
       <window_info anchor="bottom" id="Spring" order="7" sideWeight="0.49927744" weight="0.32819074" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49927744" weight="0.39130434" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49791667" visible="true" weight="0.24638729" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49927744" visible="true" weight="0.39130434" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49791667" visible="true" weight="0.25578034" />
       <window_info anchor="right" id="Bean Validation" order="3" weight="0.32875723" />
       <window_info id="Web" order="2" sideWeight="0.50208336" side_tool="true" weight="0.28395954" />
       <window_info anchor="right" id="Theme Preview" order="3" />
@@ -357,6 +342,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32819074" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -427,9 +413,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -459,9 +442,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -587,9 +567,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -620,10 +597,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
-          <folding>
-            <element signature="e#338#339#0" expanded="true" />
-            <element signature="e#402#403#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -658,9 +631,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="23" column="19" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -718,9 +688,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="52" column="23" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -744,12 +711,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sweet-consult/sweet-consult-service/src/main/java/com/sea/consult/web/ConsultationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
+        <state relative-caret-position="756">
           <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
-          <folding>
-            <element signature="e#889#890#0" expanded="true" />
-            <element signature="e#941#942#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -762,12 +725,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sweet-consult/sweet-consult-service/src/main/java/com/sea/consult/service/ConsultationRecordService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
+        <state relative-caret-position="27">
           <caret line="36" column="126" selection-start-line="36" selection-start-column="126" selection-end-line="36" selection-end-column="126" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#651#652#0" expanded="true" />
-            <element signature="e#677#678#0" expanded="true" />
           </folding>
         </state>
       </provider>
