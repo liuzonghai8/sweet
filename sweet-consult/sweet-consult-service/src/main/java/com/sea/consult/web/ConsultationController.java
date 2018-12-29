@@ -2,15 +2,11 @@ package com.sea.consult.web;
 
 import com.sea.consult.pojo.ConsultationRecord;
 import com.sea.consult.service.ConsultationRecordService;
-import com.sun.javafx.logging.PulseLogger;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import javax.sound.midi.Soundbank;
 import java.util.List;
 
 @RestController
@@ -21,17 +17,6 @@ public class ConsultationController {
     @Autowired
     private ConsultationRecordService consultationRecordService;
 
-    @GetMapping("/")
-    public String index(){
-        return  "/index";
-    }
-
-    @GetMapping("test")
-    public  String test(){
-        log.info("test 访问成功");
-        return "name=1,dd=1";
-
-    }
     @GetMapping("all")
     public List<ConsultationRecord> queryAllConsult(){
         return this.consultationRecordService.queryAllConsult();
@@ -59,6 +44,23 @@ public class ConsultationController {
             @RequestParam(value = "key", required = false) String key
     ){
         return this.consultationRecordService.queryConsultByPage(page,rows,sortBy,desc,key);
+    }
+
+    @PostMapping
+    public void addConsult( ConsultationRecord cr){
+        log.info("post add");
+        log.info(cr.toString());
+        this.consultationRecordService.addConsult(cr);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteConsult( @PathVariable("id") Long id){
+        this.consultationRecordService.deleteConsult(id);
+    }
+
+    @PutMapping
+    public void updateConsult(ConsultationRecord cr){
+        this.consultationRecordService.updateConsult(cr);
     }
 
 }
