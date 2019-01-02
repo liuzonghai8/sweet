@@ -46,12 +46,22 @@ public class ConsultationController {
         return this.consultationRecordService.queryConsultByPage(page,rows,sortBy,desc,key);
     }
 
+//    @PostMapping
+//    public void addConsult( ConsultationRecord cr){
+//        log.info("post add");
+//        log.info(cr.toString());
+//        this.consultationRecordService.addConsult(cr);
+//    }
     @PostMapping
-    public void addConsult( ConsultationRecord cr){
+    public void addConsult( ConsultationRecord consultationRecord ){
         log.info("post add");
-        log.info(cr.toString());
-        this.consultationRecordService.addConsult(cr);
+        log.info(consultationRecord.toString());
+       // ConsultationRecord cr = new ConsultationRecord();
+       // cr.setRecorder(recorder);
+        //cr.setProblemDescription(problemDescription);
+        this.consultationRecordService.addConsult(consultationRecord);
     }
+
 
     @DeleteMapping("/{id}")
     public void deleteConsult( @PathVariable("id") Long id){

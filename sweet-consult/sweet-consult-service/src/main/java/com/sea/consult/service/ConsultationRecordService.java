@@ -7,7 +7,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
@@ -40,20 +39,22 @@ public class ConsultationRecordService {
         if (StringUtils.isNotBlank(key)) {
             example.createCriteria().orLike("problemDescription", "%" + key + "%")
                     .orLike("processingMethod", "%" + key + "%")
-            .orLike("consultant","%"+key+"%")
-            .orLike("recorder","%"+key+"%")
+                     .orLike("consultant","%"+key+"%")
+                    .orLike("recorder","%"+key+"%")
+                    .orLike("brandModel","%"+key+"%")
+                    .orLike("consultDepartment","%"+key+"%")
+                    .orLike("systemPlatform","%"+key+"%")
                     ;
         }
-//        .orLike("processingMethod", "%" + key + "%")
-//                .orLike("Consultant", "%" + key + "%")
-//                .orLike("recorder", "%" + key + "%")
-//        if (StringUtils.isNotBlank(sortBy)) {
-//            String sortByClause = sortBy + (desc ? " DESC" : " ASC");
-//            example.setOrderByClause(sortByClause);
-//        }
+        log.info("查询条件为： " + example);
+        if (StringUtils.isNotBlank(sortBy)) {
+            String sortByClause = sortBy + (desc ? " DESC" : " ASC");
+            log.info("排序条件为：" + sortByClause);
+            example.setOrderByClause(sortByClause);
+       }
         List<ConsultationRecord> consultationRecords = this.consultationRecordMapper.selectByExample(example);
-
         return consultationRecords;
+
     }
 
     public void addConsult(ConsultationRecord consultationRecord) {
