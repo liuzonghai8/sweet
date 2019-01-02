@@ -1,6 +1,7 @@
 package com.sea.consult.service;
 
 import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.sea.consult.mapper.ConsultationRecordMapper;
 import com.sea.consult.pojo.ConsultationRecord;
 import lombok.extern.slf4j.Slf4j;
@@ -53,6 +54,10 @@ public class ConsultationRecordService {
             example.setOrderByClause(sortByClause);
        }
         List<ConsultationRecord> consultationRecords = this.consultationRecordMapper.selectByExample(example);
+
+        PageInfo<ConsultationRecord> pageInfo = new PageInfo<>(consultationRecords);
+
+
         return consultationRecords;
 
     }
