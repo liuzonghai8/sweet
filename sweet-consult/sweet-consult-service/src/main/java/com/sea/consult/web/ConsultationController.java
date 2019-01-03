@@ -8,7 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.Date;
 
 @RestController
 @RequestMapping("consult")
@@ -17,16 +17,6 @@ public class ConsultationController {
 
     @Autowired
     private ConsultationRecordService consultationRecordService;
-
-    @GetMapping("all")
-    public List<ConsultationRecord> queryAllConsult(){
-        return this.consultationRecordService.queryAllConsult();
-    }
-    @GetMapping("one")
-    public ConsultationRecord queryConsult(){
-     return this.consultationRecordService.queryConsult();
-    }
-
     /**
      *
      * 响应分页查询
@@ -57,6 +47,7 @@ public class ConsultationController {
     public ResultBean<Boolean> addConsult( ConsultationRecord consultationRecord ){
         log.info("post add");
         log.info(consultationRecord.toString());
+        consultationRecord.setRecordDate(new Date());
         this.consultationRecordService.addConsult(consultationRecord);
         return new ResultBean<>(true);
     }
@@ -78,8 +69,10 @@ public class ConsultationController {
      * @return
      */
     @PutMapping
-    public ResultBean<Boolean> updateConsult(ConsultationRecord cr){
-        this.consultationRecordService.updateConsult(cr);
+    public ResultBean<Boolean> updateConsult(ConsultationRecord consultationRecord){
+        log.info("更新的记录为："+consultationRecord.toString());
+        log.info(consultationRecord.getId().toString());
+        //this.consultationRecordService.updateConsult(cr);
         return new ResultBean<>(true);
     }
 
