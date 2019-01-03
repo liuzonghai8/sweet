@@ -1,11 +1,11 @@
-package com.sea.common.beans;
-
-import java.io.Serializable;
+package com.sea.common.vo;
 
 import lombok.Data;
+import java.io.Serializable;
 
 /**
  * 引用晓风轻的ResultBean
+ * @author 肖文杰
  * @param <T>
  */
 @Data

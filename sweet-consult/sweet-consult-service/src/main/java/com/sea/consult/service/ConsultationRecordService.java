@@ -20,19 +20,8 @@ public class ConsultationRecordService {
     @Autowired
    private ConsultationRecordMapper consultationRecordMapper;
 
-    public ConsultationRecord queryConsult(){
-        ConsultationRecord cr = new ConsultationRecord();
-        cr.setId(1L);
-        return this.consultationRecordMapper.selectOne(cr);
-    }
-
-
-    public List<ConsultationRecord> queryAllConsult() {
-        return this.consultationRecordMapper.selectAll();
-    }
-
-    //分页查询
-    public List<ConsultationRecord> queryConsultByPage(Integer page, Integer rows, String sortBy, Boolean desc, String key) {
+    //分页查询 List<ConsultationRecord>
+    public PageInfo<ConsultationRecord> queryConsultByPage(Integer page, Integer rows, String sortBy, Boolean desc, String key) {
         //开启分页
         PageHelper.startPage(page, rows);
         //过滤    .orLike("consultDepartment", "%" + key + "%")
@@ -53,25 +42,22 @@ public class ConsultationRecordService {
             log.info("排序条件为：" + sortByClause);
             example.setOrderByClause(sortByClause);
        }
-        List<ConsultationRecord> consultationRecords = this.consultationRecordMapper.selectByExample(example);
-
-        PageInfo<ConsultationRecord> pageInfo = new PageInfo<>(consultationRecords);
-
-
-        return consultationRecords;
-
+        return new PageInfo<>(this.consultationRecordMapper.selectByExample(example));
     }
 
+    //添加一条记录
     public void addConsult(ConsultationRecord consultationRecord) {
         log.info("添加的consult为："+ consultationRecord);
         this.consultationRecordMapper.insert(consultationRecord);
     }
 
+    //根据ID删除一条记录
     public void deleteConsult(Long id) {
         log.info("删除咨询记录Id= "+ id);
         this.consultationRecordMapper.deleteByPrimaryKey(id);
     }
 
+    //更新一条记录
     public void updateConsult( ConsultationRecord cr) {
         log.info("修改后的CR为： "+ cr);
         this.consultationRecordMapper.updateByPrimaryKey(cr);

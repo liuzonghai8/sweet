@@ -1,0 +1,90 @@
+{
+  "msg": "success",
+  "code": 0,
+  "data": {
+    "total": 8,
+    "list": [
+      {
+        "id": 2,
+        "problemDescription": "问题描述2",
+        "processingMethod": "处理方法2处理方法处理方法处理方法处理方法处理方法处理方法处理方法处理方法处理方法处理方法处理方法处理方法处理方法",
+        "consultDepartment": "咨询部门2",
+        "brandModel": "品牌机型2",
+        "systemPlatform": "系统平台2",
+        "consultant": "咨询人2",
+        "recorder": "记录人2",
+        "consultDate": "2018-12-25T16:00:00.000+0000",
+        "recordDate": "2018-12-25T16:00:00.000+0000"
+      },
+      {
+        "id": 15,
+        "problemDescription": "问题1",
+        "processingMethod": "对对对的",
+        "consultDepartment": "玉林",
+        "brandModel": "怡化",
+        "systemPlatform": "Linux",
+        "consultant": "玉林",
+        "recorder": "0",
+        "consultDate": null,
+        "recordDate": null
+      },
+      {
+        "id": 19,
+        "problemDescription": "4242",
+        "processingMethod": "2442",
+        "consultDepartment": "424242",
+        "brandModel": "日立",
+        "systemPlatform": "Linux",
+        "consultant": "424242",
+        "recorder": null,
+        "consultDate": null,
+        "recordDate": null
+      },
+      {
+        "id": 20,
+        "problemDescription": "dfsfsdf",
+        "processingMethod": "dfsfsdfsdfsdfsdffwe",
+        "consultDepartment": "sdfsfs",
+        "brandModel": "NCR25",
+        "systemPlatform": "Windows跨平台",
+        "consultant": "fsdfdsf",
+        "recorder": null,
+        "consultDate": null,
+        "recordDate": null
+      },
+      {
+        "id": 21,
+        "problemDescription": "dddddddddddddddddddddddddd",
+        "processingMethod": "ddddddddddddddddddddddddddddddddddddddddddddddddddd",
+        "consultDepartment": "dddddddddddddddddddddd",
+        "brandModel": "NCR25",
+        "systemPlatform": "Windows跨平台",
+        "consultant": "ddddddddddddddddd",
+        "recorder": null,
+        "consultDate": null,
+        "recordDate": null
+      }
+    ],
+    "pageNum": 1,
+    "pageSize": 5,
+    "size": 5,
+    "startRow": 1,
+    "endRow": 5,
+    "pages": 2,
+    "prePage": 0,
+    "nextPage": 2,
+    "isFirstPage": true,
+    "isLastPage": false,
+    "hasPreviousPage": false,
+    "hasNextPage": true,
+    "navigatePages": 8,
+    "navigatepageNums": [
+      1,
+      2
+    ],
+    "navigateFirstPage": 1,
+    "navigateLastPage": 2,
+    "firstPage": 1,
+    "lastPage": 2
+  }
+}

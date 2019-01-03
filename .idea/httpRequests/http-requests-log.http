@@ -1,0 +1,16 @@
+POST http://localhost:8082/consult
+
+###
+
+GET http://localhost:8082/consult/page
+
+<> 2019-01-03T074535.200.json
+
+###
+
+GET http://localhost:8082/consult/page
+
+<> 2019-01-03T073211.200.json
+
+###
+

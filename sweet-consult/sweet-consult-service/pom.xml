@@ -46,14 +46,38 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql.version}</version>
         </dependency>
+        <!-- 引入接口依赖-->
         <dependency>
             <groupId>com.sea.service</groupId>
             <artifactId>sweet-consult-interface</artifactId>
             <version>${sweet.latest.version}</version>
         </dependency>
         <dependency>
+            <groupId>com.sea.common</groupId>
+            <artifactId>sweet-common</artifactId>
+            <version>${sweet.latest.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.sea.common</groupId>
+            <artifactId>sweet-common</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.sea.common</groupId>
+            <artifactId>sweet-common</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.sea.common</groupId>
+            <artifactId>sweet-common</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
