@@ -1,7 +1,7 @@
 package com.sea.common.aop;
 
 
-import com.sea.common.beans.ResultBean;
+import com.sea.common.beans.ResultBean2;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -26,10 +26,10 @@ public class ControllerAOP {
     public Object handlerControllerMethod(ProceedingJoinPoint pjp) {
         long startTime = System.currentTimeMillis();
         System.out.println("访问时间"+startTime);
-        ResultBean<?> result;
+        ResultBean2<?> result;
 
         try {
-            result = (ResultBean<?>) pjp.proceed();
+            result = (ResultBean2<?>) pjp.proceed();
            // log.info("dldldl");
             System.out.println("xinxx"+pjp.getSignature());
             //log.info(pjp.getSignature() + "use time:" + (System.currentTimeMillis() - startTime));
@@ -41,8 +41,8 @@ public class ControllerAOP {
         return result;
     }
 
-    private ResultBean<?> handlerException(ProceedingJoinPoint pjp, Throwable e) {
-        ResultBean<?> result = new ResultBean();
+    private ResultBean2<?> handlerException(ProceedingJoinPoint pjp, Throwable e) {
+        ResultBean2<?> result = new ResultBean2();
 
         return result;
     }

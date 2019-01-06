@@ -65,7 +65,7 @@ public class ConsultationController {
 
     /**
      * 更新一条记录
-     * @param cr
+     * @param consultationRecord
      * @return
      */
     @PutMapping

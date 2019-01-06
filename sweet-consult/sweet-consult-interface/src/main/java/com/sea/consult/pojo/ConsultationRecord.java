@@ -19,16 +19,16 @@ public class ConsultationRecord {
 
    @Id
    @KeySql(useGeneratedKeys = true)
-   public Long id;
-   public String problemDescription;
-   public String processingMethod;
-   public String consultDepartment;
-   public String brandModel;
-   public String systemPlatform;
-   public String consultant;
-   public String recorder;
-   public Date consultDate;
-   public Date recordDate;
+   private Long id;
+   private String problemDescription;
+   private String processingMethod;
+   private String consultDepartment;
+   private String brandModel;
+   private String systemPlatform;
+   private String consultant;
+   private String recorder;
+   private Date consultDate;
+   private Date recordDate;
 }
 
 

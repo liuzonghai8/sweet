@@ -9,7 +9,7 @@ import lombok.Data;
  * @param <T>
  */
 @Data
-public class ResultBean<T> implements Serializable {
+public class ResultBean2<T> implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -27,16 +27,16 @@ public class ResultBean<T> implements Serializable {
 
 	private T data;
 
-	public ResultBean() {
+	public ResultBean2() {
 		super();
 	}
 
-	public ResultBean(T data) {
+	public ResultBean2(T data) {
 		super();
 		this.data = data;
 	}
 
-	public ResultBean(Throwable e) {
+	public ResultBean2(Throwable e) {
 		super();
 		this.msg = e.toString();
 		this.code = FAIL;
