@@ -33,7 +33,9 @@ public class UserService {
         if(StringUtils.isNotBlank(key)){
             log.info("查询条件为： " + key.toString());
             example.createCriteria().orLike("loginName","%"+ key +"%")
-                    .orLike("realName","%" + "%");
+                    .orLike("realName","%" + key +"%")
+            .orLike("phone" ,"%"+key + "%")
+            ;
         }
         //排序条件
         if(StringUtils.isNotBlank(sortBy)){

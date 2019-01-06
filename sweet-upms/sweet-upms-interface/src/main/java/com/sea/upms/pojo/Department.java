@@ -12,18 +12,20 @@ import java.util.List;
 
 @Data
 @NameStyle(Style.camelhumpAndLowercase)
-@Table(name = "sys_role")
-public class Role {
+@Table(name="sys_department")
+public class Department {
 
     @Id
     @KeySql(useGeneratedKeys = true)
-    private Integer id;
-    private String name;
-    private String code;
-    private String description;
-    private String enableTag;
+    private Long id;
+    private String name; //部门名称
+    private String code; //部门编号
+    private String description; //部门描述
+    private Long parentId; //上级部门id
+    private String address; //地址
+    private String telphone; //部门电话
+    private String enableTag; //启用标记
 
     @Transient
-    private List<Menu> menus;
-
+    private List<User> users;
 }
