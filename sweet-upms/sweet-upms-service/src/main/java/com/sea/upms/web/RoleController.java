@@ -7,6 +7,7 @@ import com.sea.upms.service.RoleService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import sun.java2d.d3d.D3DDrawImage;
 
 
 @RestController
@@ -62,7 +63,7 @@ public class RoleController {
      * @return
      */
     @PutMapping
-    public ResultBean<Boolean> updateRole(@RequestBody Role role ){
+    public ResultBean<Boolean> updateRole(Role role ){
         log.info("更新的记录为："+role.toString());
         log.info(role.getId().toString());
         roleService.updateRole(role);

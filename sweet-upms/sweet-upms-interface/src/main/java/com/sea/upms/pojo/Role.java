@@ -23,7 +23,7 @@ public class Role {
     private String description;
     private String enableTag;
 
-    @Transient
-    private List<Menu> menus;
+//    @Transient
+//    private List<Menu> menus;
 
 }

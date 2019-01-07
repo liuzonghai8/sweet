@@ -5,10 +5,14 @@ import com.github.pagehelper.PageInfo;
 import com.sea.upms.mapper.RoleMapper;
 import com.sea.upms.pojo.Role;
 import lombok.extern.slf4j.Slf4j;
+import lombok.val;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import tk.mybatis.mapper.entity.Condition;
 import tk.mybatis.mapper.entity.Example;
+
+import java.awt.*;
 
 
 @Service
@@ -48,7 +52,9 @@ public class RoleService {
 
 //添加用户
     public void addRole(Role role) {
-        roleMapper.insert(role);
+            if(!exist(role.getName())){
+                roleMapper.insert(role);
+            }
     }
 
     //物理删除
@@ -60,15 +66,15 @@ public class RoleService {
         roleMapper.updateByPrimaryKey(role);
     }
 
-//    //判断用户登录名是否存在
-//    public User exist(String loginName){
-//       Example example = new Example(User.class);
-//       log.info("参数为："+ loginName);
-//       example.createCriteria()
-//               .orEqualTo("loginName",loginName);
-//       User user1 = roleMapper.selectOneByExample(example);
-//       log.info("查询到的用户为："+user1);
-//       //ToDo 需要完善
-//        return null;
-//    }
+    //判断用户登录名是否存在
+    public Boolean exist(String name){
+
+        log.info("查询的字段为： "+name);
+        Role role = new Role();
+        role.setName(name);
+         int count = roleMapper.selectCount(role);
+         log.info("根据角色名查询到的个数为： "+String.valueOf(count));
+       if(count>0) return true;
+       return false;
+    }
 }
