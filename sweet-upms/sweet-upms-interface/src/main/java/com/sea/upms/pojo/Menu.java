@@ -17,7 +17,7 @@ public class Menu {
     @KeySql(useGeneratedKeys = true)
     private Long id;
     private String name;
-    private String permision;
+    private String permission;
     private String frontPath;
     private String requestUrl;
     private String requestMethod;

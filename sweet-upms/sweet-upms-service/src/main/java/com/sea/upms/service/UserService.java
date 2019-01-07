@@ -2,15 +2,20 @@ package com.sea.upms.service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.sea.common.enums.ExceptionEnum;
+import com.sea.common.exception.SweetException;
 import com.sea.upms.mapper.UserMapper;
 import com.sea.upms.pojo.User;
 import lombok.extern.slf4j.Slf4j;
+import lombok.val;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
 import tk.mybatis.mapper.entity.Example;
 import tk.mybatis.mapper.util.StringUtil;
 
+import java.util.Collection;
 import java.util.List;
 
 @Service
@@ -41,11 +46,12 @@ public class UserService {
         if(StringUtils.isNotBlank(sortBy)){
             log.info(sortBy+" "+(desc? " DESC" : " ASC") + " 排序");
             example.setOrderByClause(sortBy+(desc ? " DESC" : " ASC"));
-//            String sortByClause = sortBy + (desc ? " DESC" : " ASC");
-//            log.info("sortByClause "+ sortByClause);
-//            example.setOrderByClause(sortByClause);
         }
-        return new PageInfo<>(userMapper.selectByExample(example));
+        List<User> userList = userMapper.selectByExample(example);
+        if(CollectionUtils.isEmpty(userList)){
+            throw new SweetException(ExceptionEnum.USER_NOT_FOUD);
+        }
+        return new PageInfo<>(userList);
     }
 
 //添加用户

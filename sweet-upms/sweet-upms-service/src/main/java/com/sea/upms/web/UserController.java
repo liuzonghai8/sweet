@@ -6,6 +6,7 @@ import com.sea.upms.pojo.User;
 import com.sea.upms.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -27,14 +28,14 @@ public class UserController {
      * @return
      */
     @RequestMapping("page")
-    public ResultBean<PageInfo<User>> queryUserByPage(
+    public ResponseEntity<PageInfo<User>> queryUserByPage(
             @RequestParam(value = "page", defaultValue = "1") Integer page,
             @RequestParam(value = "rows", defaultValue = "5") Integer rows,
             @RequestParam(value = "sortBy", required = false) String sortBy,
             @RequestParam(value = "desc", defaultValue = "false") Boolean desc,
             @RequestParam(value = "key", required = false) String key
     ){
-        return new ResultBean<>(userService.queryUserByPage(page,rows,sortBy,desc,key));
+        return ResponseEntity.ok(userService.queryUserByPage(page,rows,sortBy,desc,key));
     }
 
     @PostMapping
