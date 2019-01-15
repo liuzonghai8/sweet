@@ -5,14 +5,12 @@ import com.github.pagehelper.PageInfo;
 import com.sea.upms.mapper.RoleMapper;
 import com.sea.upms.pojo.Role;
 import lombok.extern.slf4j.Slf4j;
-import lombok.val;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import tk.mybatis.mapper.entity.Condition;
 import tk.mybatis.mapper.entity.Example;
 
-import java.awt.*;
+import java.util.List;
 
 
 @Service
@@ -76,5 +74,9 @@ public class RoleService {
          log.info("根据角色名查询到的个数为： "+String.valueOf(count));
        if(count>0) return true;
        return false;
+    }
+
+    public List<Role> queryRole() {
+        return roleMapper.selectAll();
     }
 }

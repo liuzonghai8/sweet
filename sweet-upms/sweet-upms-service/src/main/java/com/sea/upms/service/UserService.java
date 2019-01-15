@@ -48,9 +48,9 @@ public class UserService {
             example.setOrderByClause(sortBy+(desc ? " DESC" : " ASC"));
         }
         List<User> userList = userMapper.selectByExample(example);
-        if(CollectionUtils.isEmpty(userList)){
-            throw new SweetException(ExceptionEnum.USER_NOT_FOUD);
-        }
+//        if(CollectionUtils.isEmpty(userList)){
+//            throw new SweetException(ExceptionEnum.USER_NOT_FOUD);
+//        }
         return new PageInfo<>(userList);
     }
 

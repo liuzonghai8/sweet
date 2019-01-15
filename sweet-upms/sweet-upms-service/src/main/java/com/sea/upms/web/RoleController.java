@@ -6,8 +6,11 @@ import com.sea.upms.pojo.Role;
 import com.sea.upms.service.RoleService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import sun.java2d.d3d.D3DDrawImage;
+
+import java.util.List;
 
 
 @RestController
@@ -28,7 +31,7 @@ public class RoleController {
      * @return
      */
     @RequestMapping("page")
-    public ResultBean<PageInfo<Role>> queryUserByPage(
+    public ResultBean<PageInfo<Role>> queryRoleByPage(
             @RequestParam(value = "page", defaultValue = "1") Integer page,
             @RequestParam(value = "rows", defaultValue = "5") Integer rows,
             @RequestParam(value = "sortBy", required = false) String sortBy,
@@ -70,13 +73,10 @@ public class RoleController {
         return new ResultBean<>(true);
     }
 
-//    @RequestMapping("test")
-//    public String getUser(){
-//       User user =  userService.exist("登录名");
-//      // log.info("user " + user.toString());
-//        log.info("user:");
-//       return null; //user.toString();
-//    }
+@GetMapping("/all")
+    public ResponseEntity<List<Role>> queryRole(){
+        return ResponseEntity.ok(roleService.queryRole());
+}
 
 
 }

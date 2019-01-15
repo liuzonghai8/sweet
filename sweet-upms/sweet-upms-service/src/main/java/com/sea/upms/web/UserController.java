@@ -6,8 +6,12 @@ import com.sea.upms.pojo.User;
 import com.sea.upms.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import sun.reflect.generics.tree.VoidDescriptor;
+
+import java.util.List;
 
 
 @RestController
@@ -39,11 +43,13 @@ public class UserController {
     }
 
     @PostMapping
-    public ResultBean<Boolean> addUser( User user ){
+    public ResponseEntity<Void> addUser( User user){
         log.info("post add");
         log.info(user.toString());
+        //log.info("页面传回来的id roles: "+roleIds.toString());
+//        , @RequestParam("rids") List<Long> roleIds ,@RequestParam("rids") List<Long> roleIds
         userService.addUser(user);
-        return new ResultBean<>(true);
+        return new ResponseEntity(HttpStatus.CREATED);
     }
 
     /**
@@ -52,9 +58,9 @@ public class UserController {
      * @return
      */
     @DeleteMapping("/{id}")
-    public ResultBean<Boolean> deleteUser( @PathVariable("id") Long id){
+    public ResponseEntity<Void> deleteUser( @PathVariable("id") Long id){
         userService.deleteUser(id);
-        return new ResultBean<>(true);
+        return ResponseEntity.ok().build();
     }
 
     /**
@@ -63,11 +69,9 @@ public class UserController {
      * @return
      */
     @PutMapping
-    public ResultBean<Boolean> updateUser(User user ){
-        log.info("更新的记录为："+user.toString());
-        log.info(user.getId().toString());
+    public ResponseEntity<Void> updateUser(User user ){
         userService.updateUser(user);
-        return new ResultBean<>(true);
+        return ResponseEntity.ok().build();
     }
 
     @RequestMapping("test")
