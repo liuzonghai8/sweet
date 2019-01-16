@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="429124e9-14ce-4d59-8d9d-ac43610d8e19" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/sweet-common/src/main/java/com/sea/common/utils/CheckUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sweet-upms/sweet-upms-interface/src/main/java/com/sea/upms/vo/UserVo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet-upms/sweet-upms-interface/src/main/java/com/sea/upms/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-upms/sweet-upms-interface/src/main/java/com/sea/upms/pojo/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet-upms/sweet-upms-interface/target/classes/com/sea/upms/pojo/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-upms/sweet-upms-interface/target/classes/com/sea/upms/pojo/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/service/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/service/RoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet-common/src/main/java/com/sea/common/enums/ExceptionEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-common/src/main/java/com/sea/common/enums/ExceptionEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/mapper/UserMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/web/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/web/RoleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/web/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/web/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet-upms/sweet-upms-service/target/classes/com/sea/upms/service/RoleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-upms/sweet-upms-service/target/classes/com/sea/upms/service/RoleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet-upms/sweet-upms-service/target/classes/com/sea/upms/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-upms/sweet-upms-service/target/classes/com/sea/upms/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet-upms/sweet-upms-service/target/classes/com/sea/upms/web/RoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-upms/sweet-upms-service/target/classes/com/sea/upms/web/RoleController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sweet-upms/sweet-upms-service/target/classes/com/sea/upms/web/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-upms/sweet-upms-service/target/classes/com/sea/upms/web/UserController.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/sweet-consult/target/" />
@@ -54,55 +47,37 @@
     </favorites_list>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/web/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="45" column="50" selection-start-line="45" selection-start-column="50" selection-end-line="45" selection-end-column="50" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RoleVo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-interface/src/main/java/com/sea/upms/vo/RoleVo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RoleController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/web/RoleController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1782">
-              <caret line="77" column="54" selection-start-line="77" selection-start-column="45" selection-end-line="77" selection-end-column="54" />
-              <folding>
-                <element signature="e#2138#2139#0" expanded="true" />
-                <element signature="e#2199#2200#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RoleService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/service/RoleService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1728">
-              <caret line="79" column="38" selection-start-line="79" selection-start-column="38" selection-end-line="79" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/service/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="945">
-              <caret line="53" column="21" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
+            <state relative-caret-position="297">
+              <caret line="81" column="41" lean-forward="true" selection-start-line="81" selection-start-column="41" selection-end-line="81" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#794#795#0" expanded="true" />
+                <element signature="e#840#841#0" expanded="true" />
+                <element signature="e#1897#1898#0" expanded="true" />
+                <element signature="e#1936#1937#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserMapper.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/mapper/UserMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExceptionEnum.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sweet-common/src/main/java/com/sea/common/enums/ExceptionEnum.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -110,8 +85,8 @@
       <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-interface/src/main/java/com/sea/upms/pojo/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="346">
+              <caret line="28" selection-start-line="28" selection-end-line="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -119,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserVo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-interface/src/main/java/com/sea/upms/vo/UserVo.java">
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/web/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="914">
+              <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -139,6 +114,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>USER_CREATE_FAILED\(500\,\&quot;新增用户失败\&quot;\)\,\n</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -169,7 +149,6 @@
         <option value="$PROJECT_DIR$/sweet-upms/sweet-upms-interface/src/main/java/com/sea/upms/pojo/Department.java" />
         <option value="$PROJECT_DIR$/sweet-upms/sweet-upms-interface/src/main/java/com/sea/upms/pojo/UserDepartment.java" />
         <option value="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/mapper/RoleMapper.java" />
-        <option value="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/mapper/UserMapper.java" />
         <option value="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/mapper/MenuMapper.java" />
         <option value="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/mapper/DepartmentMapper.java" />
         <option value="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/service/DepartmentService.java" />
@@ -185,14 +164,15 @@
         <option value="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/web/MenuController.java" />
         <option value="$PROJECT_DIR$/sweet-upms/sweet-upms-interface/src/main/java/com/sea/upms/pojo/Menu.java" />
         <option value="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/service/MenuService.java" />
-        <option value="$PROJECT_DIR$/sweet-common/src/main/java/com/sea/common/enums/ExceptionEnum.java" />
         <option value="$PROJECT_DIR$/sweet-common/src/main/java/com/sea/common/utils/CheckUtil.java" />
         <option value="$PROJECT_DIR$/sweet-upms/sweet-upms-interface/src/main/java/com/sea/upms/vo/UserVo.java" />
-        <option value="$PROJECT_DIR$/sweet-upms/sweet-upms-interface/src/main/java/com/sea/upms/pojo/User.java" />
-        <option value="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/service/UserService.java" />
         <option value="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/web/RoleController.java" />
         <option value="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/service/RoleService.java" />
+        <option value="$PROJECT_DIR$/sweet-upms/sweet-upms-interface/src/main/java/com/sea/upms/pojo/User.java" />
         <option value="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/web/UserController.java" />
+        <option value="$PROJECT_DIR$/sweet-common/src/main/java/com/sea/common/enums/ExceptionEnum.java" />
+        <option value="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/service/UserService.java" />
+        <option value="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/mapper/UserMapper.java" />
       </list>
     </option>
   </component>
@@ -232,12 +212,59 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
               <item name="sweet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweet" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweet" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweet" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweet" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweet" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweet" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="enums" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
@@ -355,14 +382,43 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="upms" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweet" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-upms" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-upms-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="upms" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweet" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-upms" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-upms-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="upms" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweet" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-upms" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-upms-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -551,7 +607,8 @@
       <workItem from="1547441303766" duration="7217000" />
       <workItem from="1547471594083" duration="60000" />
       <workItem from="1547471889567" duration="1837000" />
-      <workItem from="1547526457102" duration="3755000" />
+      <workItem from="1547526457102" duration="4239000" />
+      <workItem from="1547613065075" duration="2970000" />
     </task>
     <task id="LOCAL-00001" summary="create registry">
       <created>1545369121971</created>
@@ -564,7 +621,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93606000" />
+    <option name="totallyTimeSpent" value="97060000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -597,14 +654,15 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="8" weight="0.32819074" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" order="13" sideWeight="0.49927744" visible="true" weight="0.37868163" />
+      <window_info anchor="bottom" id="Run Dashboard" order="13" sideWeight="0.49927744" visible="true" weight="0.09677419" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32819074" />
       <window_info anchor="bottom" auto_hide="true" x="28" y="311" width="1384" height="237" id="Run" order="2" sideWeight="0.49927744" type="SLIDING" weight="0.5126405" />
       <window_info anchor="bottom" id="Spring" order="10" sideWeight="0.49927744" weight="0.32819074" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49783236" weight="0.30294532" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49308756" visible="true" weight="0.28251445" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49308756" visible="true" weight="0.28757226" />
       <window_info anchor="right" id="Bean Validation" order="3" weight="0.32875723" />
       <window_info id="Web" order="2" sideWeight="0.50208336" side_tool="true" weight="0.28395954" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" sideWeight="0.50208336" side_tool="true" weight="0.28395954" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -612,7 +670,6 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -631,13 +688,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://H:/maven/repository3/tk/mybatis/mapper-core/1.0.4/mapper-core-1.0.4-sources.jar!/tk/mybatis/mapper/entity/Example.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2025">
-          <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://H:/maven/repository3/tk/mybatis/mapper-base/1.0.4/mapper-base-1.0.4-sources.jar!/tk/mybatis/mapper/common/example/SelectOneByExampleMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -709,13 +759,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/mapper/RoleMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/mapper/UserMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
@@ -834,13 +877,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sweet-common/src/main/java/com/sea/common/enums/ExceptionEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/service/MenuService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
@@ -859,20 +895,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="26" lean-forward="true" selection-start-column="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/UpmsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sweet-common/src/main/java/com/sea/common/utils/CheckUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="24" lean-forward="true" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -939,13 +961,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="53" column="21" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-interface/src/main/java/com/sea/upms/vo/RoleVo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -971,16 +986,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-interface/src/main/java/com/sea/upms/pojo/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-interface/src/main/java/com/sea/upms/vo/UserVo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="281">
@@ -991,13 +996,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/web/UserController.java">
+    <entry file="file://$PROJECT_DIR$/sweet-common/src/main/java/com/sea/common/utils/CheckUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="45" column="50" selection-start-line="45" selection-start-column="50" selection-end-line="45" selection-end-column="50" />
+        <state relative-caret-position="54">
+          <caret line="2" column="24" lean-forward="true" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/UpmsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-interface/src/main/java/com/sea/upms/pojo/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="28" selection-start-line="28" selection-end-line="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://H:/maven/repository3/tk/mybatis/mapper-base/1.0.4/mapper-base-1.0.4-sources.jar!/tk/mybatis/mapper/common/base/insert/InsertMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/web/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="914">
+          <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweet-common/src/main/java/com/sea/common/enums/ExceptionEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="81" column="41" lean-forward="true" selection-start-line="81" selection-start-column="41" selection-end-line="81" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#794#795#0" expanded="true" />
+            <element signature="e#840#841#0" expanded="true" />
+            <element signature="e#1897#1898#0" expanded="true" />
+            <element signature="e#1936#1937#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/mapper/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
         </state>
       </provider>
     </entry>

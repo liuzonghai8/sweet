@@ -43,12 +43,9 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<Void> addUser( User user){
-        log.info("post add");
-        log.info(user.toString());
-        //log.info("页面传回来的id roles: "+roleIds.toString());
-//        , @RequestParam("rids") List<Long> roleIds ,@RequestParam("rids") List<Long> roleIds
-        userService.addUser(user);
+    public ResponseEntity<Void> addUser( User user,@RequestParam("rids") List<Long> roleIds){
+        log.info("添加的用户： "+user.toString()+"分配的角色id: "+roleIds.toString());
+        userService.saveUser(user,roleIds);
         return new ResponseEntity(HttpStatus.CREATED);
     }
 

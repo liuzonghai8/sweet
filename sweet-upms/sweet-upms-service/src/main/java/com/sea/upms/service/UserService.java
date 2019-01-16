@@ -7,15 +7,12 @@ import com.sea.common.exception.SweetException;
 import com.sea.upms.mapper.UserMapper;
 import com.sea.upms.pojo.User;
 import lombok.extern.slf4j.Slf4j;
-import lombok.val;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.util.CollectionUtils;
+import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
-import tk.mybatis.mapper.util.StringUtil;
 
-import java.util.Collection;
 import java.util.List;
 
 @Service
@@ -78,5 +75,19 @@ public class UserService {
        log.info("查询到的用户为："+user1);
        //ToDo 需要完善
         return null;
+    }
+//添加用户并分配角色
+    @Transactional
+    public void saveUser(User user, List<Long> roleIds) {
+      int resultCount = userMapper.insert(user);
+      if(resultCount==0){
+          throw new SweetException(ExceptionEnum.USER_CREATE_FAILED);
+      }
+      for(Long rid : roleIds){
+          resultCount = userMapper.saveUserRole(user.getId(),rid);
+          if(resultCount==0){
+              throw new SweetException(ExceptionEnum.USER_CREATE_FAILED);
+          }
+      }
     }
 }
