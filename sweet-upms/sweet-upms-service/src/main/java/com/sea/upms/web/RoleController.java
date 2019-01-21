@@ -78,5 +78,10 @@ public class RoleController {
         return ResponseEntity.ok(roleService.queryRole());
 }
 
+@GetMapping("user/{id}")
+public  ResponseEntity<List<Role>> getRoleByUuserId(@PathVariable("id") Long id){
+        log.info("页面传过来的用户id为：" + id);
+       return ResponseEntity.ok(roleService.getRoleByUserId(id));
+}
 
 }

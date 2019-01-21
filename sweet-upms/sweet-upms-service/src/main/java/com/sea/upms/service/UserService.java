@@ -53,7 +53,7 @@ public class UserService {
 
 //添加用户
     public void addUser(User user) {
-        userMapper.insert(user);
+        userMapper.insertSelective(user);
     }
 
     //物理删除

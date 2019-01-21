@@ -1,7 +1,6 @@
 package com.sea.upms.web;
 
 import com.github.pagehelper.PageInfo;
-import com.sea.common.vo.ResultBean;
 import com.sea.upms.pojo.User;
 import com.sea.upms.service.UserService;
 import lombok.extern.slf4j.Slf4j;
@@ -9,9 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import sun.reflect.generics.tree.VoidDescriptor;
 
-import java.util.List;
 
 
 @RestController
@@ -42,12 +39,19 @@ public class UserController {
         return ResponseEntity.ok(userService.queryUserByPage(page,rows,sortBy,desc,key));
     }
 
-    @PostMapping
-    public ResponseEntity<Void> addUser( User user,@RequestParam("rids") List<Long> roleIds){
-        log.info("添加的用户： "+user.toString()+"分配的角色id: "+roleIds.toString());
-        userService.saveUser(user,roleIds);
+//    @PostMapping
+//    public ResponseEntity<Void> addUser( User user,@RequestParam("rids") List<Long> roleIds){
+//        log.info("添加的用户： "+user.toString()+"分配的角色id: "+roleIds.toString());
+//        userService.saveUser(user,roleIds);
+//        return new ResponseEntity(HttpStatus.CREATED);
+//    }
+   @PostMapping
+    public ResponseEntity<Void> addUser( User user){
+        log.info("添加的用户： "+user.toString());
+        userService.addUser(user);
         return new ResponseEntity(HttpStatus.CREATED);
     }
+
 
     /**
      * 根据ID删除
