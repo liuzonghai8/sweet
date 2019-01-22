@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 
 
 @RestController
@@ -54,7 +55,7 @@ public class UserController {
 
 
     /**
-     * 根据ID删除
+     * 根据用户ID删除用户
      * @param id
      * @return
      */
@@ -65,7 +66,7 @@ public class UserController {
     }
 
     /**
-     * 更新一条记录
+     * 更新用户
      * @param user
      * @return
      */
@@ -74,14 +75,22 @@ public class UserController {
         userService.updateUser(user);
         return ResponseEntity.ok().build();
     }
-
-    @RequestMapping("test")
-    public String getUser(){
-       User user =  userService.exist("登录名");
-      // log.info("user " + user.toString());
-        log.info("user:");
-       return null; //user.toString();
+//
+    @PostMapping("role")
+    public ResponseEntity<Void> saveUserRole( @RequestParam("uid") Long userId ,
+                                              @RequestParam("rids") List<Long> roleIds){
+        log.info("userid: "+ userId+ "  roleids "+ roleIds);
+        userService.saveUserRole(userId,roleIds);
+        return  new ResponseEntity(HttpStatus.CREATED);
     }
-
+    //删除用户角色关系
+    @DeleteMapping("role")
+    public ResponseEntity<Void> deleteUserRole( @PathVariable("uid") Long userid,
+                                                @PathVariable("rid") Long roleid){
+        log.info("删除的userid"+userid+"删除的角色id"+roleid);
+        //userService.deleteUserRole(userid,roleid);
+        return ResponseEntity.ok().build();
+//        rids=6&uid=64
+    }
 
 }

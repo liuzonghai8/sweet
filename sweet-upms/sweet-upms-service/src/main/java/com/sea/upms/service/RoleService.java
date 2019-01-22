@@ -5,12 +5,14 @@ import com.github.pagehelper.PageInfo;
 import com.sea.upms.mapper.RoleMapper;
 import com.sea.upms.pojo.Role;
 import lombok.extern.slf4j.Slf4j;
+import lombok.val;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -86,9 +88,13 @@ public class RoleService {
     public List<Role> getRoleByUserId(Long userId) {
         //1、先通过用户id 查询该用户对应的角色ids，
           List<Long> ids = roleMapper.findRole(userId);
-          log.info("查询到的角色IDS： "+ids.toString());
+          log.info("getRoleByUserId查询到的角色IDS： "+ids.toString());
         //2、再通过角色ids 查询角色
-
-        return  null;
+        List<Role> roles = new ArrayList<Role>();
+        for(Long id:ids){
+            roles.add(roleMapper.selectByPrimaryKey(id));
+        }
+        log.info("RoleService查询到的角色： "+roles.toString());
+        return  roles;
     }
 }

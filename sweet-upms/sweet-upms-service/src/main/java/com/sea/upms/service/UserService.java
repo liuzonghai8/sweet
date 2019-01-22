@@ -90,4 +90,22 @@ public class UserService {
           }
       }
     }
+
+    //给用户添加角色
+    public void saveUserRole(Long userId, List<Long> roleIds) {
+        int resultCount = 0;
+        for(Long rid : roleIds){
+            resultCount = userMapper.saveUserRole(userId,rid);
+            log.info("插入返回值： "+resultCount );
+            if(resultCount==0){
+                throw new SweetException(ExceptionEnum.USER_CREATE_FAILED);
+            }
+        }
+
+    }
+
+    //删除用户关联对应的角色
+    public void deleteUserRole(Long userid, Long roleid) {
+        userMapper.deleteUserRole(userid,roleid);
+    }
 }

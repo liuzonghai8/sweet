@@ -67,7 +67,7 @@ public class RoleController {
      */
     @PutMapping
     public ResultBean<Boolean> updateRole(Role role ){
-        log.info("更新的记录为："+role.toString());
+        log.info("更新角色信息为："+role.toString());
         log.info(role.getId().toString());
         roleService.updateRole(role);
         return new ResultBean<>(true);
@@ -80,7 +80,7 @@ public class RoleController {
 
 @GetMapping("user/{id}")
 public  ResponseEntity<List<Role>> getRoleByUuserId(@PathVariable("id") Long id){
-        log.info("页面传过来的用户id为：" + id);
+        log.info(" RoleConntroller .getRoleByUuserId页面传过来的用户id为：" + id);
        return ResponseEntity.ok(roleService.getRoleByUserId(id));
 }
 
