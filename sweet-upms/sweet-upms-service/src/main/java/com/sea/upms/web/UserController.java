@@ -85,12 +85,11 @@ public class UserController {
     }
     //删除用户角色关系
     @DeleteMapping("role")
-    public ResponseEntity<Void> deleteUserRole( @PathVariable("uid") Long userid,
-                                                @PathVariable("rid") Long roleid){
+    public ResponseEntity<Void> deleteUserRole( @RequestParam("uid") Long userid,
+                                                @RequestParam("rid") Long roleid){
         log.info("删除的userid"+userid+"删除的角色id"+roleid);
-        //userService.deleteUserRole(userid,roleid);
+        userService.deleteUserRole(userid,roleid);
         return ResponseEntity.ok().build();
-//        rids=6&uid=64
     }
 
 }
