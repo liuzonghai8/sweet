@@ -3,6 +3,7 @@ package com.sea.upms.web;
 import com.github.pagehelper.PageInfo;
 import com.sea.common.vo.ResultBean;
 import com.sea.upms.pojo.Role;
+import com.sea.upms.pojo.User;
 import com.sea.upms.service.RoleService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -84,4 +85,13 @@ public  ResponseEntity<List<Role>> getRoleByUuserId(@PathVariable("id") Long id)
        return ResponseEntity.ok(roleService.getRoleByUserId(id));
 }
 
+    /**
+     * 根据Id获取一个角色
+     * @param roleId
+     * @return
+     */
+    @GetMapping("/{id}")
+    public ResponseEntity<Role> findUser(@PathVariable("id") Long roleId){
+        return ResponseEntity.ok(roleService.findUser(roleId));
+    }
 }

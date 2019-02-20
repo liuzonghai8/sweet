@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.persistence.Id;
 import java.util.List;
 
 
@@ -54,6 +55,15 @@ public class UserController {
         return new ResponseEntity(HttpStatus.CREATED);
     }
 
+    /**
+     * 根据Id获取一个用户
+     * @param userid
+     * @return
+     */
+    @GetMapping("/{id}")
+    public ResponseEntity<User> findUser(@PathVariable("id") Long userid){
+        return ResponseEntity.ok(userService.findUser(userid));
+    }
 
     /**
      * 根据用户ID删除用户
@@ -76,7 +86,7 @@ public class UserController {
         userService.updateUser(user);
         return ResponseEntity.ok().build();
     }
-//
+//用户角色对应添加
     @PostMapping("role")
     public ResponseEntity<Void> saveUserRole( @RequestParam("uid") Long userId ,
                                               @RequestParam("rids") List<Long> roleIds){

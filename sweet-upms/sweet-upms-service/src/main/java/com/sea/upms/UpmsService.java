@@ -9,7 +9,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableScheduling
+//@EnableScheduling
 @Slf4j
 @MapperScan("com.sea.upms.mapper")
 public class UpmsService {

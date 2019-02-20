@@ -97,4 +97,8 @@ public class RoleService {
         log.info("RoleService查询到的角色： "+roles.toString());
         return  roles;
     }
+
+    public Role findUser(Long roleId) {
+        return roleMapper.selectByPrimaryKey(roleId);
+    }
 }
