@@ -3,13 +3,11 @@ package com.sea.upms.web;
 import com.github.pagehelper.PageInfo;
 import com.sea.common.vo.ResultBean;
 import com.sea.upms.pojo.Role;
-import com.sea.upms.pojo.User;
 import com.sea.upms.service.RoleService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import sun.java2d.d3d.D3DDrawImage;
 
 import java.util.List;
 
@@ -42,6 +40,7 @@ public class RoleController {
         return new ResultBean<>(roleService.queryRoleByPage(page,rows,sortBy,desc,key));
     }
 
+    //添加角色
     @PostMapping
     public ResultBean<Boolean> addRole(Role role ){
         log.info("post add");
@@ -79,7 +78,12 @@ public class RoleController {
         return ResponseEntity.ok(roleService.queryRole());
 }
 
-@GetMapping("user/{id}")
+    /**
+     * 通过用户Id，查询该用户拥有的角色
+     * @param id
+     * @return
+     */
+    @GetMapping("user/{id}")
 public  ResponseEntity<List<Role>> getRoleByUuserId(@PathVariable("id") Long id){
         log.info(" RoleConntroller .getRoleByUuserId页面传过来的用户id为：" + id);
        return ResponseEntity.ok(roleService.getRoleByUserId(id));

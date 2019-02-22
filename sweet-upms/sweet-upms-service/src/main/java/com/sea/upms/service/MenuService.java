@@ -2,11 +2,13 @@ package com.sea.upms.service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.sea.common.enums.CommonConstant;
 import com.sea.common.enums.ExceptionEnum;
 import com.sea.common.exception.SweetException;
 import com.sea.upms.mapper.MenuMapper;
 import com.sea.upms.pojo.Menu;
 import lombok.extern.slf4j.Slf4j;
+import lombok.val;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -45,5 +47,29 @@ public class MenuService {
             throw new SweetException(ExceptionEnum.MENU_NOT_FOUND);
         }
         return new PageInfo<>(menuList);
+    }
+
+    public List<Menu> queryAll() {
+       return menuMapper.selectAll();
+       // return menuMapper.queryAllMenus();
+    }
+
+    public List<Menu> getTree() {
+        return null;
+    }
+
+    /**
+     * 查询有效的menu
+     * @return
+     */
+    public List<Menu> selectList() {
+        log.info("SelectList menu");
+        Menu menu = new Menu();
+        menu.setEnableTag(CommonConstant.STATUS_NORMAL);
+        log.info("SelectList menu2");
+        //return menuMapper.selectByExample(menu);
+        List<Menu> menus = menuMapper.selectAll();
+        log.info("查询到是menus："+menus.toString());
+        return menus;
     }
 }

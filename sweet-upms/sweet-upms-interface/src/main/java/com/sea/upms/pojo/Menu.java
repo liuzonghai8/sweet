@@ -15,14 +15,15 @@ public class Menu {
 
     @Id
     @KeySql(useGeneratedKeys = true)
-    private Long id;
-    private String name;
-    private String permission;
-    private String frontPath;
-    private String requestUrl;
-    private String requestMethod;
-    private Long parentId;
-    private String icon;
-    private String component;
-    private String enableTag;
+    private int id;
+    private String name; //名称
+    private String permission;  // 权限
+    private String frontPath; //前端路径
+    private String requestUrl; //请求URL
+    private String requestMethod; //请求方法
+    private int parentId;  //上级id parent_id
+    private String icon;  // 页面图标
+    private String component; // Vue组件
+    private Integer sort; //排序
+    private String enableTag; // 是否使用标志
 }
