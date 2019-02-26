@@ -11,10 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -48,12 +45,17 @@ public class MenuController {
     }
 //    ResultBean<
     @GetMapping("tree")
-    public List<MenuTree> getTree(){
-        return TreeUtil.builTree(menuService.selectList(),-1);
+    public ResultBean<List<MenuTree>>  getTree(){
+        return new ResultBean<>(TreeUtil.builTree(menuService.selectList(),-1));
     }
 
     @GetMapping("all")
     public List<Menu> qureyAll(){
         return menuService.queryAll();
+    }
+
+    @GetMapping("/{id}")
+    public ResultBean<Menu> queryMenu(@PathVariable("id") Integer menuId){
+        return new ResultBean<>(menuService.queryMenu(menuId));
     }
 }

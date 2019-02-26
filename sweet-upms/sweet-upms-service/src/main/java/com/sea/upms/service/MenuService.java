@@ -51,7 +51,7 @@ public class MenuService {
 
     public List<Menu> queryAll() {
        return menuMapper.selectAll();
-       // return menuMapper.queryAllMenus();
+        //return menuMapper.queryAllMenus();
     }
 
     public List<Menu> getTree() {
@@ -71,5 +71,9 @@ public class MenuService {
         List<Menu> menus = menuMapper.selectAll();
         log.info("查询到是menus："+menus.toString());
         return menus;
+    }
+
+    public Menu queryMenu(Integer menuId) {
+        return menuMapper.selectByPrimaryKey(menuId);
     }
 }
