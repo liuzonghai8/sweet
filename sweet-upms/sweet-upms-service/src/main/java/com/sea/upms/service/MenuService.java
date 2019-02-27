@@ -76,4 +76,16 @@ public class MenuService {
     public Menu queryMenu(Integer menuId) {
         return menuMapper.selectByPrimaryKey(menuId);
     }
+
+    public void addMenu(Menu menu) {
+        menuMapper.insertSelective(menu);
+    }
+
+    public void updateMenu(Menu menu) {
+        menuMapper.updateByPrimaryKey(menu);
+    }
+
+    public void deleteMenu(Integer id) {
+        menuMapper.deleteByPrimaryKey(id);
+    }
 }

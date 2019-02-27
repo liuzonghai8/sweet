@@ -8,6 +8,7 @@ import com.sea.upms.pojo.Menu;
 import com.sea.upms.service.MenuService;
 import com.sun.javafx.logging.PulseLogger;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.ibatis.annotations.Delete;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -43,19 +44,58 @@ public class MenuController {
     ){
         return  new ResultBean<>(menuService.queryMenuByPage(page,rows,sortBy,desc,key));
     }
-//    ResultBean<
+
+    /**
+     * 获取菜单树 所有menu
+     * @return
+     */
     @GetMapping("tree")
     public ResultBean<List<MenuTree>>  getTree(){
         return new ResultBean<>(TreeUtil.builTree(menuService.selectList(),-1));
     }
 
+    /**
+     * 查询所有
+     * @return
+     */
     @GetMapping("all")
     public List<Menu> qureyAll(){
         return menuService.queryAll();
     }
 
+    /**
+     * 根据Id查询单个menu
+     * @param menuId
+     * @return
+     */
     @GetMapping("/{id}")
     public ResultBean<Menu> queryMenu(@PathVariable("id") Integer menuId){
         return new ResultBean<>(menuService.queryMenu(menuId));
     }
+
+    /**
+     * 添加一个菜单
+     * @param menu
+     */
+    @PostMapping
+    public  void addMenu(Menu menu){
+        log.info(menu.toString());
+        menuService.addMenu(menu);
+    }
+
+    /**
+     * 更换一个菜单
+     * @param menu
+     */
+   @PutMapping
+    public void updateMenu(Menu menu){
+        log.info(menu.toString());
+        menuService.updateMenu(menu);
+   }
+
+   @DeleteMapping("/{id}")
+    public  void deleteMenu(@PathVariable("id") Integer id){
+       menuService.deleteMenu(id);
+   }
+
 }
