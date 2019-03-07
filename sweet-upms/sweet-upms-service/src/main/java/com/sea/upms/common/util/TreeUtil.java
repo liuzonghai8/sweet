@@ -62,6 +62,11 @@ public class TreeUtil {
             node.setEnableTag(menu.getEnableTag());
             node.setSort(menu.getSort());
             node.setLabel(menu.getName());
+            //test
+            node.setComponent(menu.getComponent());
+            node.setPath(menu.getFrontPath());
+            node.setIcon(menu.getIcon());
+            //node.setChildren(menu.ge);
            // log.info("当前node："+node.toString());
             trees.add(node);
         }

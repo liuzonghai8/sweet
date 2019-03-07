@@ -38,6 +38,7 @@ public class UserController {
             @RequestParam(value = "key", required = false) String key
     ){
         log.info("runing queryUserByPage()");
+        log.info("page"+page+"rows"+rows+"sortBy"+sortBy+"desc"+desc+"key"+key);
         return ResponseEntity.ok(userService.queryUserByPage(page,rows,sortBy,desc,key));
     }
 
