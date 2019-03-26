@@ -1,17 +1,13 @@
 package com.sea.upms.web;
 
 import com.github.pagehelper.PageInfo;
-import com.sea.common.vo.ResultBean;
+import com.sea.common.vo.ResultDTO;
 import com.sea.upms.common.util.TreeUtil;
 import com.sea.upms.dto.MenuTree;
 import com.sea.upms.pojo.Menu;
 import com.sea.upms.service.MenuService;
-import com.sun.javafx.logging.PulseLogger;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.ibatis.annotations.Delete;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -35,14 +31,14 @@ public class MenuController {
      * @return
      */
     @RequestMapping("page")
-    public ResultBean<PageInfo<Menu>> queryMenuByPage(
+    public ResultDTO<PageInfo<Menu>> queryMenuByPage(
             @RequestParam(value = "page", defaultValue = "1") Integer page,
             @RequestParam(value = "rows", defaultValue = "5") Integer rows,
             @RequestParam(value = "sortBy", required = false) String sortBy,
             @RequestParam(value = "desc", defaultValue = "false") Boolean desc,
             @RequestParam(value = "key", required = false) String key
     ){
-        return  new ResultBean<>(menuService.queryMenuByPage(page,rows,sortBy,desc,key));
+        return  new ResultDTO<>(menuService.queryMenuByPage(page,rows,sortBy,desc,key));
     }
 
     /**
@@ -50,8 +46,8 @@ public class MenuController {
      * @return
      */
     @GetMapping("tree")
-    public ResultBean<List<MenuTree>>  getTree(){
-        return new ResultBean<>(TreeUtil.builTree(menuService.selectList(),-1));
+    public ResultDTO<List<MenuTree>> getTree(){
+        return new ResultDTO<>(TreeUtil.builTree(menuService.selectList(),-1));
     }
 
     /**
@@ -69,8 +65,8 @@ public class MenuController {
      * @return
      */
     @GetMapping("/{id}")
-    public ResultBean<Menu> queryMenu(@PathVariable("id") Integer menuId){
-        return new ResultBean<>(menuService.queryMenu(menuId));
+    public ResultDTO<Menu> queryMenu(@PathVariable("id") Integer menuId){
+        return new ResultDTO<>(menuService.queryMenu(menuId));
     }
 
     /**

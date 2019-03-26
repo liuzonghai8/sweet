@@ -1,7 +1,7 @@
 package com.sea.upms.web;
 
 import com.github.pagehelper.PageInfo;
-import com.sea.common.vo.ResultBean;
+import com.sea.common.vo.ResultDTO;
 import com.sea.upms.pojo.Role;
 import com.sea.upms.service.RoleService;
 import lombok.extern.slf4j.Slf4j;
@@ -30,23 +30,23 @@ public class RoleController {
      * @return
      */
     @RequestMapping("page")
-    public ResultBean<PageInfo<Role>> queryRoleByPage(
+    public ResultDTO<PageInfo<Role>> queryRoleByPage(
             @RequestParam(value = "page", defaultValue = "1") Integer page,
             @RequestParam(value = "rows", defaultValue = "5") Integer rows,
             @RequestParam(value = "sortBy", required = false) String sortBy,
             @RequestParam(value = "desc", defaultValue = "false") Boolean desc,
             @RequestParam(value = "key", required = false) String key
     ){
-        return new ResultBean<>(roleService.queryRoleByPage(page,rows,sortBy,desc,key));
+        return new ResultDTO<>(roleService.queryRoleByPage(page,rows,sortBy,desc,key));
     }
 
     //添加角色
     @PostMapping
-    public ResultBean<Boolean> addRole(Role role ){
+    public ResultDTO<Boolean> addRole(Role role ){
         log.info("post add");
         log.info(role.toString());
         roleService.addRole(role);
-        return new ResultBean<>(true);
+        return new ResultDTO<>(true);
     }
 
     /**
@@ -55,9 +55,9 @@ public class RoleController {
      * @return
      */
     @DeleteMapping("/{id}")
-    public ResultBean<Boolean> deleteRole( @PathVariable("id") Long id){
+    public ResultDTO<Boolean> deleteRole(@PathVariable("id") Long id){
         roleService.deleteRole(id);
-        return new ResultBean<>(true);
+        return new ResultDTO<>(true);
     }
 
     /**
@@ -66,11 +66,11 @@ public class RoleController {
      * @return
      */
     @PutMapping
-    public ResultBean<Boolean> updateRole(Role role ){
+    public ResultDTO<Boolean> updateRole(Role role ){
         log.info("更新角色信息为："+role.toString());
         log.info(role.getId().toString());
         roleService.updateRole(role);
-        return new ResultBean<>(true);
+        return new ResultDTO<>(true);
     }
 
 @GetMapping("/all")

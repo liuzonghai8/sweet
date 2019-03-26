@@ -1,8 +1,10 @@
 package com.sea.upms.web;
 
 import com.github.pagehelper.PageInfo;
+import com.sea.common.vo.ResultDTO;
 import com.sea.upms.pojo.User;
 import com.sea.upms.service.UserService;
+import jdk.nashorn.internal.ir.ReturnNode;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -10,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 
 @RestController
@@ -101,6 +104,34 @@ public class UserController {
         log.info("删除的userid"+userid+"删除的角色id"+roleid);
         userService.deleteUserRole(userid,roleid);
         return ResponseEntity.ok().build();
+    }
+
+    /**
+     * 根据用户名登陆
+     * @param userName
+     * @param password
+     * @return
+     */
+    @PostMapping("login")
+    public ResultDTO<User> login(@RequestParam("username") String userName,
+                                 @RequestParam("password") String password){
+        return new ResultDTO<>(userService.findUserByUser(userName,password));
+    }
+
+    @GetMapping("info")
+    public String getUserInfo(){
+        return "{roles: ['admin','edit']}";
+    }
+
+    @PostMapping("logout")
+    public String logOut(){
+        //设置用户的token为空
+        return "seccuss";
+    }
+
+    @GetMapping("test")
+    public String test(){
+        return "test API success!";
     }
 
 //    @RequestMapping("page")

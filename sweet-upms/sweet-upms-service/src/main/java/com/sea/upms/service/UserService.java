@@ -112,4 +112,14 @@ public class UserService {
     public User findUser(Long userid) {
         return userMapper.selectByPrimaryKey(userid);
     }
+
+    public User findUserByUser(String userName,String password) {
+        log.info("user-servesi-findUserByUser");
+        User u = new User();
+        u.setLoginName(userName);
+        u.setPassword(password);
+        log.info(u.toString());
+        return u;
+        //return userMapper.selectOneByExample(u);
+    }
 }

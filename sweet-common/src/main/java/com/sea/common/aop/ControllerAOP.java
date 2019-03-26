@@ -18,7 +18,7 @@ import org.springframework.stereotype.Component;
 //@Slf4j
 public class ControllerAOP {
 
-    @Pointcut("execution(public com.sea.common.vo.ResultBean *(..))")
+    @Pointcut("execution(public com.sea.common.vo.ResultDTO *(..))")
     public void controllerMethod() {
     }
 
