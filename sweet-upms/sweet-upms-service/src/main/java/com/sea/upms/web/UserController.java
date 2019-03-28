@@ -4,15 +4,14 @@ import com.github.pagehelper.PageInfo;
 import com.sea.common.vo.ResultDTO;
 import com.sea.upms.pojo.User;
 import com.sea.upms.service.UserService;
-import jdk.nashorn.internal.ir.ReturnNode;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.List;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 
 @RestController

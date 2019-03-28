@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -53,6 +54,7 @@ public class UserService {
 
 //添加用户
     public void addUser(User user) {
+        user.setCreateTime(new Date());
         userMapper.insertSelective(user);
     }
 
@@ -62,7 +64,11 @@ public class UserService {
     }
     //更新用户
     public void updateUser(User user) {
-        userMapper.updateByPrimaryKey(user);
+        user.setUpdateTime(new Date());
+        //全部属性更新，无值则为空
+       // userMapper.updateByPrimaryKey(user);
+        //选择性更新，有值，无值保持原来的
+        userMapper.updateByPrimaryKeySelective(user);
     }
 
     //判断用户登录名是否存在

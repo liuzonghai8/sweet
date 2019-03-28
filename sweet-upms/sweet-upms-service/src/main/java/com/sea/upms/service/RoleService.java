@@ -66,7 +66,7 @@ public class RoleService {
     }
     //更新用户
     public void updateRole(Role role) {
-        roleMapper.updateByPrimaryKey(role);
+        roleMapper.updateByPrimaryKeySelective(role);
     }
 
     //判断用户登录名是否存在
