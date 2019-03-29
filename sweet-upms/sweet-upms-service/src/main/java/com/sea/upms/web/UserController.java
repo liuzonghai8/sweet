@@ -32,16 +32,18 @@ public class UserController {
      * @return
      */
     @RequestMapping("page")
-    public ResponseEntity<PageInfo<User>> queryUserByPage(
+    public ResultDTO<PageInfo<User>> queryUserByPage(
             @RequestParam(value = "page", defaultValue = "1") Integer page,
             @RequestParam(value = "rows", defaultValue = "5") Integer rows,
             @RequestParam(value = "sortBy", required = false) String sortBy,
             @RequestParam(value = "desc", defaultValue = "false") Boolean desc,
             @RequestParam(value = "key", required = false) String key
     ){
-        log.info("runing queryUserByPage()");
+        //log.info("runing queryUserByPage()");
         log.info("page"+page+"rows"+rows+"sortBy"+sortBy+"desc"+desc+"key"+key);
-        return ResponseEntity.ok(userService.queryUserByPage(page,rows,sortBy,desc,key));
+        //return ResponseEntity.ok(userService.queryUserByPage(page,rows,sortBy,desc,key));
+        PageInfo<User> pu = userService.queryUserByPage(page,rows,sortBy,desc,key);
+        return new ResultDTO<>(pu);
     }
 
 //    @PostMapping

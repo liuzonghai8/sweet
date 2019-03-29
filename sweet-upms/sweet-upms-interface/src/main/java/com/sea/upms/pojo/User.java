@@ -9,6 +9,7 @@ import tk.mybatis.mapper.code.Style;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Date;
+import java.time.LocalDateTime;
 
 @Data
 @NameStyle(Style.camelhumpAndLowercase)
@@ -26,8 +27,8 @@ public class User {
     private String enableTag;
     @JsonIgnore
     private String salt; //私有盐
-    private Date createTime;
-    private Date updateTime;
+    private LocalDateTime createTime;
+    private LocalDateTime updateTime;
     private String intro;
 //    @Transient
 //    private List<Role> roles; //用户对应的角色集合
