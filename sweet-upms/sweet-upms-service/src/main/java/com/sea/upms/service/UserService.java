@@ -5,16 +5,19 @@ import com.github.pagehelper.PageInfo;
 import com.sea.common.enums.ExceptionEnum;
 import com.sea.common.exception.SweetException;
 import com.sea.upms.mapper.UserMapper;
+import com.sea.upms.pojo.Role;
 import com.sea.upms.pojo.User;
+import com.sea.upms.vo.UserVo;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 
 import java.time.LocalDateTime;
-import java.util.Date;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -47,9 +50,19 @@ public class UserService {
             example.setOrderByClause(sortBy+(desc ? " DESC" : " ASC"));
         }
         List<User> userList = userMapper.selectByExample(example);
+        log.info("userService"+ userList);
 //        if(CollectionUtils.isEmpty(userList)){
 //            throw new SweetException(ExceptionEnum.USER_NOT_FOUD);
 //        }
+        //test
+//        List<UserVo> userVoList = new ArrayList<UserVo>();
+//        BeanUtils.copyProperties(userList,userVoList);
+//        log.info("userVoList"+userVoList);
+//        userVoList.forEach(user -> {
+//               List<Role> roles = userMapper.findRolesByUserId(user.getId());
+//               user.setRoles(roles);
+//        });
+//        log.info("查询后："+userVoList.toString());
         return new PageInfo<>(userList);
     }
 
@@ -99,15 +112,18 @@ public class UserService {
     }
 
     //给用户添加角色
+    @Transactional
     public void saveUserRole(Long userId, List<Long> roleIds) {
-        int resultCount = 0;
-        for(Long rid : roleIds){
-            resultCount = userMapper.saveUserRole(userId,rid);
-            log.info("给用户添加角色saveUserRole 插入返回值： "+resultCount );
-            if(resultCount==0){
-                throw new SweetException(ExceptionEnum.USER_CREATE_FAILED);
-            }
-        }
+        roleIds.forEach(rid->{
+            userMapper.saveUserRole(userId,rid);
+        });
+//        for(Long rid : roleIds){
+//            resultCount = userMapper.saveUserRole(userId,rid);
+//            log.info("给用户添加角色saveUserRole 插入返回值： "+resultCount );
+//            if(resultCount==0){
+//                throw new SweetException(ExceptionEnum.USER_CREATE_FAILED);
+//            }
+//        }
 
     }
 

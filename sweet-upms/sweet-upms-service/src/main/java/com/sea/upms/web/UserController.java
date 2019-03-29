@@ -2,9 +2,11 @@ package com.sea.upms.web;
 
 import com.github.pagehelper.PageInfo;
 import com.sea.common.vo.ResultDTO;
+import com.sea.upms.dto.UserDTO;
 import com.sea.upms.pojo.User;
 import com.sea.upms.service.UserService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -53,10 +55,14 @@ public class UserController {
 //        return new ResponseEntity(HttpStatus.CREATED);
 //    }
    @PostMapping
-    public ResponseEntity<Void> addUser( User user){
+    public ResultDTO<Boolean> addUser( UserDTO userDTO){
+        User user = new User();
+       BeanUtils.copyProperties(userDTO,user);
         log.info("添加的用户： "+user.toString());
         userService.addUser(user);
-        return new ResponseEntity(HttpStatus.CREATED);
+        log.info("角色包括："+userDTO.getRoles());
+       userService.saveUserRole(user.getId(),userDTO.getRoles());
+        return new ResultDTO<>(Boolean.TRUE);
     }
 
     /**

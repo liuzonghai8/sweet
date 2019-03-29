@@ -17,7 +17,7 @@ public class Role {
 
     @Id
     @KeySql(useGeneratedKeys = true)
-    private Integer id;
+    private Long id;
     private String name;
     private String code;
     private String description;
