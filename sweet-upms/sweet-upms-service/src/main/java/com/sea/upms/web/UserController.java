@@ -1,10 +1,12 @@
 package com.sea.upms.web;
 
 import com.github.pagehelper.PageInfo;
+import com.sea.common.vo.PageResult;
 import com.sea.common.vo.ResultDTO;
 import com.sea.upms.dto.UserDTO;
 import com.sea.upms.pojo.User;
 import com.sea.upms.service.UserService;
+import com.sea.upms.vo.UserVo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,18 +36,15 @@ public class UserController {
      * @return
      */
     @RequestMapping("page")
-    public ResultDTO<PageInfo<User>> queryUserByPage(
+    public ResultDTO<PageResult<UserVo>> queryUserByPage(
             @RequestParam(value = "page", defaultValue = "1") Integer page,
             @RequestParam(value = "rows", defaultValue = "5") Integer rows,
             @RequestParam(value = "sortBy", required = false) String sortBy,
             @RequestParam(value = "desc", defaultValue = "false") Boolean desc,
             @RequestParam(value = "key", required = false) String key
     ){
-        //log.info("runing queryUserByPage()");
         log.info("page"+page+"rows"+rows+"sortBy"+sortBy+"desc"+desc+"key"+key);
-        //return ResponseEntity.ok(userService.queryUserByPage(page,rows,sortBy,desc,key));
-        PageInfo<User> pu = userService.queryUserByPage(page,rows,sortBy,desc,key);
-        return new ResultDTO<>(pu);
+        return new ResultDTO<>(userService.queryUserByPage(page,rows,sortBy,desc,key));
     }
 
 //    @PostMapping
@@ -56,13 +55,7 @@ public class UserController {
 //    }
    @PostMapping
     public ResultDTO<Boolean> addUser( UserDTO userDTO){
-        User user = new User();
-       BeanUtils.copyProperties(userDTO,user);
-        log.info("添加的用户： "+user.toString());
-        userService.addUser(user);
-        log.info("角色包括："+userDTO.getRoles());
-       userService.saveUserRole(user.getId(),userDTO.getRoles());
-        return new ResultDTO<>(Boolean.TRUE);
+        return new ResultDTO<Boolean>(userService.addUser(userDTO));
     }
 
     /**
@@ -92,9 +85,8 @@ public class UserController {
      * @return
      */
     @PutMapping
-    public ResponseEntity<Void> updateUser(User user ){
-        userService.updateUser(user);
-        return ResponseEntity.ok().build();
+    public ResultDTO<Boolean> updateUser(UserDTO userDTO ){
+        return new ResultDTO<Boolean>( userService.updateUser(userDTO));
     }
 //用户角色对应添加
     @PostMapping("role")

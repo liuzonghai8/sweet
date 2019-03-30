@@ -4,8 +4,9 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.sea.common.enums.ExceptionEnum;
 import com.sea.common.exception.SweetException;
+import com.sea.common.vo.PageResult;
+import com.sea.upms.dto.UserDTO;
 import com.sea.upms.mapper.UserMapper;
-import com.sea.upms.pojo.Role;
 import com.sea.upms.pojo.User;
 import com.sea.upms.vo.UserVo;
 import lombok.extern.slf4j.Slf4j;
@@ -17,8 +18,8 @@ import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @Slf4j
@@ -32,17 +33,17 @@ public class UserService {
     }
 
 
-    public PageInfo<User> queryUserByPage(Integer page, Integer rows,
-                                             String sortBy, Boolean desc, String key) {
-        PageHelper.startPage(page,rows);//开启分页
+    public PageResult<UserVo> queryUserByPage(Integer page, Integer rows,
+                                              String sortBy, Boolean desc, String key) {
+      //分页允许最多查100条
+        PageHelper.startPage(page,Math.min(rows,100));//开启分页
         //过滤查询条件
         Example example = new Example(User.class);
         if(StringUtils.isNotBlank(key)){
             log.info("查询条件为： " + key.toString());
             example.createCriteria().orLike("loginName","%"+ key +"%")
                     .orLike("realName","%" + key +"%")
-            .orLike("phone" ,"%"+key + "%")
-            ;
+            .orLike("phone" ,"%"+key + "%");
         }
         //排序条件
         if(StringUtils.isNotBlank(sortBy)){
@@ -50,39 +51,67 @@ public class UserService {
             example.setOrderByClause(sortBy+(desc ? " DESC" : " ASC"));
         }
         List<User> userList = userMapper.selectByExample(example);
-        log.info("userService"+ userList);
-//        if(CollectionUtils.isEmpty(userList)){
-//            throw new SweetException(ExceptionEnum.USER_NOT_FOUD);
-//        }
-        //test
-//        List<UserVo> userVoList = new ArrayList<UserVo>();
-//        BeanUtils.copyProperties(userList,userVoList);
-//        log.info("userVoList"+userVoList);
-//        userVoList.forEach(user -> {
-//               List<Role> roles = userMapper.findRolesByUserId(user.getId());
-//               user.setRoles(roles);
-//        });
-//        log.info("查询后："+userVoList.toString());
-        return new PageInfo<>(userList);
+        //获取总条数
+        PageInfo<User> pageInfo = new PageInfo<>(userList);
+        //Java8的特性,stream() map()/filter()等箭头函数
+        List<UserVo> userVoList = userList.stream().map(user -> {
+            UserVo userVo = new UserVo();
+            BeanUtils.copyProperties(user,userVo);
+            //查询拥有角色
+             // userVo.setRoles(userMapper.findRolesByUserId(user.getId()));
+            userVo.setRoles(userMapper.findRolesByUser(user.getId()));
+            //TODO 查询所属部门
+            return userVo;
+        }).collect(Collectors.toList());
+
+        return new PageResult<>(pageInfo.getTotal(),userVoList);
     }
 
 //添加用户
-    public void addUser(User user) {
+    @Transactional
+    public Boolean addUser(UserDTO userDTO) {
+        User user = new User();
+       BeanUtils.copyProperties(userDTO,user);
         user.setCreateTime(LocalDateTime.now());
-        userMapper.insertSelective(user);
+        int result= userMapper.insertSelective(user);
+        log.info("insert user seccss ,result:{},  user:{} ", result  , user);
+        result=saveUserRole(user.getId(),userDTO.getRoles());
+        if (result==0) return false;
+        else return true;
     }
 
     //物理删除
     public void deleteUser(Long id) {
         userMapper.deleteByPrimaryKey(id);
     }
-    //更新用户
-    public void updateUser(User user) {
+
+
+    /**
+     * 更新用户 包括更新用户的角色
+     * @param userDTO
+     * @return
+     */
+    public Boolean updateUser(UserDTO userDTO) {
+        User user = new User();
+        BeanUtils.copyProperties(userDTO,user);
         user.setUpdateTime(LocalDateTime.now());
-        //全部属性更新，无值则为空
-       // userMapper.updateByPrimaryKey(user);
-        //选择性更新，有值，无值保持原来的
-        userMapper.updateByPrimaryKeySelective(user);
+        int  result = userMapper.updateByPrimaryKeySelective(user);
+        log.info("update User seccuss, result: {},  user: {}) ", result,user );
+
+        //比较两个角色ID数组，新角色不包含有旧角色的需要删除，旧角色不包含新角色的添加
+        List<Long> nRoleIds = userDTO.getRoles();
+        log.info("new Role ids: {} ",nRoleIds);
+        List<Long> oRoleIds = userMapper.finRoleIds(userDTO.getId());
+        log.info("old role ids, {}",oRoleIds);
+        //0.先过滤 TODO
+
+       //1.删除旧角色 TODO
+
+        // 2.添加新角色
+        saveUserRole(userDTO.getId(),nRoleIds);
+
+        if (result==0)return false;
+        return true;
     }
 
     //判断用户登录名是否存在
@@ -111,20 +140,20 @@ public class UserService {
       }
     }
 
-    //给用户添加角色
+    /**
+     * 给用户添加角色
+     * @param userId
+     * @param roleIds
+     * @return
+     */
     @Transactional
-    public void saveUserRole(Long userId, List<Long> roleIds) {
+    public int saveUserRole(Long userId, List<Long> roleIds) {
         roleIds.forEach(rid->{
-            userMapper.saveUserRole(userId,rid);
+          int result=  userMapper.saveUserRole(userId,rid);
+          if(result==0)return ;
         });
-//        for(Long rid : roleIds){
-//            resultCount = userMapper.saveUserRole(userId,rid);
-//            log.info("给用户添加角色saveUserRole 插入返回值： "+resultCount );
-//            if(resultCount==0){
-//                throw new SweetException(ExceptionEnum.USER_CREATE_FAILED);
-//            }
-//        }
-
+        log.info("insert User and Role relationships seccuss, userid:"+userId+" roleIds: "+roleIds);
+        return 1;
     }
 
     //删除用户关联对应的角色
@@ -145,4 +174,6 @@ public class UserService {
         return u;
         //return userMapper.selectOneByExample(u);
     }
+
+
 }
