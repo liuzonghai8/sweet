@@ -7,10 +7,13 @@ import com.sea.common.exception.SweetException;
 import com.sea.common.vo.PageResult;
 import com.sea.upms.dto.UserDTO;
 import com.sea.upms.mapper.UserMapper;
+import com.sea.upms.pojo.Role;
 import com.sea.upms.pojo.User;
 import com.sea.upms.vo.UserVo;
 import lombok.extern.slf4j.Slf4j;
+import lombok.val;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.ibatis.jdbc.Null;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,6 +21,7 @@ import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -91,6 +95,7 @@ public class UserService {
      * @param userDTO
      * @return
      */
+    @Transactional
     public Boolean updateUser(UserDTO userDTO) {
         User user = new User();
         BeanUtils.copyProperties(userDTO,user);
@@ -98,18 +103,24 @@ public class UserService {
         int  result = userMapper.updateByPrimaryKeySelective(user);
         log.info("update User seccuss, result: {},  user: {}) ", result,user );
 
-        //比较两个角色ID数组，新角色不包含有旧角色的需要删除，旧角色不包含新角色的添加
+        //比较两个角色ids，删除旧角色ids有而新角色ids没有的roleId，添加新的有而旧的没有的roleid
         List<Long> nRoleIds = userDTO.getRoles();
         log.info("new Role ids: {} ",nRoleIds);
         List<Long> oRoleIds = userMapper.finRoleIds(userDTO.getId());
         log.info("old role ids, {}",oRoleIds);
         //0.先过滤 TODO
-
-       //1.删除旧角色 TODO
-
+        List<Long> addRoleIds = new ArrayList<>();
+        if(null != nRoleIds)
+            addRoleIds =  nRoleIds.stream().filter(nid->!oRoleIds.contains(nid)).collect(Collectors.toList());
+        log.info("添加的角色关系： {}",addRoleIds );
+        List<Long> delRoleIds = oRoleIds.stream().filter(oId->!nRoleIds.contains(oId)).collect(Collectors.toList());
+       log.info("删除的角色关系： {}",delRoleIds);
+        //1.删除旧角色 TODO
+        if(null != delRoleIds || 0 < delRoleIds.size() )
+            deleteUserRoles(userDTO.getId(),delRoleIds);
         // 2.添加新角色
-        saveUserRole(userDTO.getId(),nRoleIds);
-
+        if(null != addRoleIds || 0 < addRoleIds.size())
+            saveUserRole(userDTO.getId(),addRoleIds);
         if (result==0)return false;
         return true;
     }
@@ -146,7 +157,7 @@ public class UserService {
      * @param roleIds
      * @return
      */
-    @Transactional
+    //@Transactional
     public int saveUserRole(Long userId, List<Long> roleIds) {
         roleIds.forEach(rid->{
           int result=  userMapper.saveUserRole(userId,rid);
@@ -156,9 +167,19 @@ public class UserService {
         return 1;
     }
 
-    //删除用户关联对应的角色
+//    //删除用户关联对应的角色
     public void deleteUserRole(Long userid, Long roleid) {
         userMapper.deleteUserRole(userid,roleid);
+    }
+
+    /**
+     * 删除用户角色关联的关系
+     * @param userId
+     * @param roleIds
+     */
+    public void deleteUserRoles(Long userId,List<Long> roleIds){
+        roleIds.forEach(rId->userMapper.deleteUserRole(userId,rId));
+        log.info("delete User and Roles relationships  seccuss, userId:{},roleIds: {}",userId,roleIds);
     }
 
     public User findUser(Long userid) {
@@ -176,4 +197,13 @@ public class UserService {
     }
 
 
+    public UserVo findUserAllInfo(Long userid) {
+        UserVo userVo = new UserVo();
+        User user = userMapper.selectByPrimaryKey(userid);
+        List<Role> roles = userMapper.findRolesByUser(userid);
+        BeanUtils.copyProperties(user,userVo);
+        userVo.setRoles(roles);
+        log.info("select cesscuss,userId:{}, userVo:{}",userid,userVo);
+        return userVo;
+    }
 }

@@ -1,20 +1,18 @@
 package com.sea.upms.web;
 
-import com.github.pagehelper.PageInfo;
 import com.sea.common.vo.PageResult;
 import com.sea.common.vo.ResultDTO;
 import com.sea.upms.dto.UserDTO;
 import com.sea.upms.pojo.User;
 import com.sea.upms.service.UserService;
 import com.sea.upms.vo.UserVo;
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
 import java.util.List;
 
 
@@ -53,6 +51,12 @@ public class UserController {
 //        userService.saveUser(user,roleIds);
 //        return new ResponseEntity(HttpStatus.CREATED);
 //    }
+
+    /**
+     * 添加用户
+     * @param userDTO
+     * @return
+     */
    @PostMapping
     public ResultDTO<Boolean> addUser( UserDTO userDTO){
         return new ResultDTO<Boolean>(userService.addUser(userDTO));
@@ -63,9 +67,18 @@ public class UserController {
      * @param userid
      * @return
      */
+  //  @GetMapping("/{id}")
+    public ResultDTO<User> findUser(@PathVariable("id") Long userid){
+        return new ResultDTO<>(userService.findUser(userid));
+    }
+    /**
+     * 根据Id获取一个用户所有信息
+     * @param userid
+     * @return
+     */
     @GetMapping("/{id}")
-    public ResponseEntity<User> findUser(@PathVariable("id") Long userid){
-        return ResponseEntity.ok(userService.findUser(userid));
+    public ResultDTO<UserVo> findUserAllInfo(@PathVariable("id") Long userid){
+        return new ResultDTO<>(userService.findUserAllInfo(userid));
     }
 
     /**
@@ -74,14 +87,14 @@ public class UserController {
      * @return
      */
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteUser( @PathVariable("id") Long id){
+    public ResultDTO<Boolean> deleteUser(@PathVariable("id") Long id){
         userService.deleteUser(id);
-        return ResponseEntity.ok().build();
+        return new ResultDTO<>(true);
     }
 
     /**
      * 更新用户
-     * @param user
+     * @param userDTO
      * @return
      */
     @PutMapping
