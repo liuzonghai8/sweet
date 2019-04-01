@@ -1,6 +1,7 @@
 package com.sea.upms.web;
 
 import com.github.pagehelper.PageInfo;
+import com.sea.common.vo.PageResult;
 import com.sea.common.vo.ResultDTO;
 import com.sea.upms.pojo.Role;
 import com.sea.upms.service.RoleService;
@@ -19,6 +20,7 @@ public class RoleController {
 
     @Autowired
     private RoleService roleService;
+
     /**
      *
      * 响应分页查询
@@ -30,7 +32,7 @@ public class RoleController {
      * @return
      */
     @RequestMapping("page")
-    public ResultDTO<PageInfo<Role>> queryRoleByPage(
+    public ResultDTO<PageResult<Role>> queryRoleByPage(
             @RequestParam(value = "page", defaultValue = "1") Integer page,
             @RequestParam(value = "rows", defaultValue = "5") Integer rows,
             @RequestParam(value = "sortBy", required = false) String sortBy,
@@ -40,13 +42,14 @@ public class RoleController {
         return new ResultDTO<>(roleService.queryRoleByPage(page,rows,sortBy,desc,key));
     }
 
-    //添加角色
+    /**
+     * 添加角色
+     * @param role
+     * @return
+     */
     @PostMapping
     public ResultDTO<Boolean> addRole(Role role ){
-        log.info("post add");
-        log.info(role.toString());
-        roleService.addRole(role);
-        return new ResultDTO<>(true);
+        return new ResultDTO<>(roleService.addRole(role));
     }
 
     /**
@@ -56,8 +59,8 @@ public class RoleController {
      */
     @DeleteMapping("/{id}")
     public ResultDTO<Boolean> deleteRole(@PathVariable("id") Long id){
-        roleService.deleteRole(id);
-        return new ResultDTO<>(true);
+
+        return new ResultDTO<Boolean>( roleService.deleteRole(id));
     }
 
     /**
@@ -67,10 +70,7 @@ public class RoleController {
      */
     @PutMapping
     public ResultDTO<Boolean> updateRole(Role role ){
-        log.info("更新角色信息为："+role.toString());
-        log.info(role.getId().toString());
-        roleService.updateRole(role);
-        return new ResultDTO<>(true);
+        return new ResultDTO<>(roleService.updateRole(role));
     }
 
 @GetMapping("/all")

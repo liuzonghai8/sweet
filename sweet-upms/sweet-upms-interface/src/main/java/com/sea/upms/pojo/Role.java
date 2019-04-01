@@ -8,6 +8,7 @@ import tk.mybatis.mapper.code.Style;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Data
@@ -22,6 +23,8 @@ public class Role {
     private String code;
     private String description;
     private String enableTag;
+    private LocalDateTime createTime;
+    private LocalDateTime updateTime;
 
 //    @Transient
 //    private List<Menu> menus;

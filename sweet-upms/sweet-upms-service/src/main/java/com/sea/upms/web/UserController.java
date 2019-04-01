@@ -6,7 +6,6 @@ import com.sea.upms.dto.UserDTO;
 import com.sea.upms.pojo.User;
 import com.sea.upms.service.UserService;
 import com.sea.upms.vo.UserVo;
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -88,8 +87,7 @@ public class UserController {
      */
     @DeleteMapping("/{id}")
     public ResultDTO<Boolean> deleteUser(@PathVariable("id") Long id){
-        userService.deleteUser(id);
-        return new ResultDTO<>(true);
+        return new ResultDTO<Boolean>( userService.deleteUser(id));
     }
 
     /**

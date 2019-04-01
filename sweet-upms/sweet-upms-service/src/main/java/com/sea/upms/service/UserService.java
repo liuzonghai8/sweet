@@ -85,8 +85,16 @@ public class UserService {
     }
 
     //物理删除
-    public void deleteUser(Long id) {
-        userMapper.deleteByPrimaryKey(id);
+    @Transactional
+    public Boolean deleteUser(Long id) {
+        //0.先删除关联的角色关系
+        userMapper.deleteUserRoles(id);
+        //1.再删除用户本身
+        int result= userMapper.deleteByPrimaryKey(id);
+       log.info("delete User id: {}, and result:{}",id,result);
+       if (result==0)
+           return false;
+        return true;
     }
 
 

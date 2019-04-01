@@ -28,5 +28,8 @@ public interface UserMapper extends Mapper<User> {
     @Select("SELECT role_id FROM sys_user_role WHERE user_id =  #{uid}")
     List<Long> finRoleIds(@Param("uid") Long uid);
 
+    @Delete("DELETE FROM sys_user_role WHERE user_id = #{uid}")
+    int deleteUserRoles(@Param("uid") Long uid);
+
 }
 
