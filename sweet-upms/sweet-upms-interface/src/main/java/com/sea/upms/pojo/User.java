@@ -17,7 +17,7 @@ public class User {
     @Id
     @KeySql(useGeneratedKeys = true)
     private Long id;
-    private  String loginName;
+    private  String username;
     private  String realName;
     @JsonIgnore
     private String password;
@@ -29,6 +29,8 @@ public class User {
     private LocalDateTime createTime;
     private LocalDateTime updateTime;
     private String intro;
+
+
 //    @Transient
 //    private List<Role> roles; //用户对应的角色集合
 

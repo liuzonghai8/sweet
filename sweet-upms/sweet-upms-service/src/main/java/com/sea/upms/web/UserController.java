@@ -155,6 +155,12 @@ public class UserController {
 //        log.info("runing queryUserByPage()");
 //        return ResponseEntity.ok(userService.queryUserByPage(page,rows,sortBy,desc,key));
 //    }
-
+    @PostMapping("login2")
+   public ResultDTO<User> queryUser(
+           @RequestParam("username") String username,
+           @RequestParam("password") String password
+   ){
+        return new ResultDTO<User>(userService.findUserByName(username,password));
+   }
 
 }

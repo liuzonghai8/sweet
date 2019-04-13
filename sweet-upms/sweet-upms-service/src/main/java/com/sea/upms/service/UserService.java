@@ -9,6 +9,7 @@ import com.sea.upms.dto.UserDTO;
 import com.sea.upms.mapper.UserMapper;
 import com.sea.upms.pojo.Role;
 import com.sea.upms.pojo.User;
+import com.sea.upms.utils.CodecUtils;
 import com.sea.upms.vo.UserVo;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
@@ -32,7 +33,7 @@ public class UserService {
     @Autowired
     private UserMapper userMapper;
 
-    public List<User> queryUser(){
+    public List<User> queryAllUser(){
         return  userMapper.selectAll();
     }
 
@@ -197,9 +198,9 @@ public class UserService {
     public User findUserByUser(String userName,String password) {
         log.info("user-servesi-findUserByUser");
         User u = new User();
-        u.setLoginName(userName);
+        u.setUsername(userName);
         u.setPassword(password);
-        log.info(u.toString());
+        log.info("----u的信息为：-----",u.toString());
         return u;
         //return userMapper.selectOneByExample(u);
     }
@@ -213,5 +214,24 @@ public class UserService {
         userVo.setRoles(roles);
         log.info("select cesscuss,userId:{}, userVo:{}",userid,userVo);
         return userVo;
+    }
+
+    /**
+     * 根据用户名查询，再判断密码是否正确
+     * @param username
+     * @param password
+     * @return
+     */
+    public User findUserByName(String username, String password) {
+        log.info("------username:{}--passsword:{}---",username,password);
+        User user = new User();
+        user.setUsername(username);
+        User result = userMapper.selectOne(user);
+        //log.info("query user: ",result);
+        /*if(!StringUtils.equals(CodecUtils.md5Hex(password, user.getSalt()), user.getPassword()))
+            result = null;*/
+
+
+        return user;//result;
     }
 }

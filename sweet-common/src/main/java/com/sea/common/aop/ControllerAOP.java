@@ -24,7 +24,7 @@ public class ControllerAOP {
 
     @Around("controllerMethod()")
     public Object handlerControllerMethod(ProceedingJoinPoint pjp) {
-        log.info("Aop is running pjp:{}",pjp);
+        log.info("------------Aop is running pjp:{}---------------",pjp);
 //        long startTime = System.currentTimeMillis();
 //        System.out.println("访问时间"+startTime);
 //        ResultBean2<?> result;
