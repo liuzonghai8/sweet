@@ -12,8 +12,10 @@ import lombok.NoArgsConstructor;
 public enum ExceptionEnum {
 
       USER_NOT_FOUD(404,"用户查询失败"),
+    USER_CREATE_FAILED(500,"新增用户失败"),
 
       MENU_NOT_FOUND(404,"菜单查询失败"),
+
 
 
 //    BRAND_CREATE_FAILED(500, "新增品牌失败"),

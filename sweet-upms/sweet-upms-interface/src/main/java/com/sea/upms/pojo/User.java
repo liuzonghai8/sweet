@@ -26,7 +26,7 @@ public class User {
     private  String phone;
     private String avatar;
     private String enableTag;
-    @Transient
-    private List<Role> roles; //用户对应的角色集合
+//    @Transient
+//    private List<Role> roles; //用户对应的角色集合
 
 }

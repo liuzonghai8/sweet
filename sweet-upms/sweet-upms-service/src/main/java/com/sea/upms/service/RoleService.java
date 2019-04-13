@@ -9,10 +9,11 @@ import lombok.val;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import tk.mybatis.mapper.entity.Condition;
+import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 
-import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Service
@@ -58,8 +59,10 @@ public class RoleService {
     }
 
     //物理删除
+    @Transactional
     public void deleteRole(Long id) {
         roleMapper.deleteByPrimaryKey(id);
+        //TODO 删除用户角色表中跟角色id关联的用户id
     }
     //更新用户
     public void updateRole(Role role) {
@@ -76,5 +79,26 @@ public class RoleService {
          log.info("根据角色名查询到的个数为： "+String.valueOf(count));
        if(count>0) return true;
        return false;
+    }
+
+    public List<Role> queryRole() {
+        return roleMapper.selectAll();
+    }
+
+    public List<Role> getRoleByUserId(Long userId) {
+        //1、先通过用户id 查询该用户对应的角色ids，
+          List<Long> ids = roleMapper.findRole(userId);
+          log.info("getRoleByUserId查询到的角色IDS： "+ids.toString());
+        //2、再通过角色ids 查询角色
+        List<Role> roles = new ArrayList<Role>();
+        for(Long id:ids){
+            roles.add(roleMapper.selectByPrimaryKey(id));
+        }
+        log.info("RoleService查询到的角色： "+roles.toString());
+        return  roles;
+    }
+
+    public Role findUser(Long roleId) {
+        return roleMapper.selectByPrimaryKey(roleId);
     }
 }

@@ -1,13 +1,15 @@
 package com.sea.upms.web;
 
 import com.github.pagehelper.PageInfo;
-import com.sea.common.vo.ResultBean;
 import com.sea.upms.pojo.User;
 import com.sea.upms.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 
 @RestController
@@ -35,48 +37,82 @@ public class UserController {
             @RequestParam(value = "desc", defaultValue = "false") Boolean desc,
             @RequestParam(value = "key", required = false) String key
     ){
+        log.info("runing queryUserByPage()");
         return ResponseEntity.ok(userService.queryUserByPage(page,rows,sortBy,desc,key));
     }
 
-    @PostMapping
-    public ResultBean<Boolean> addUser( User user ){
-        log.info("post add");
-        log.info(user.toString());
+//    @PostMapping
+//    public ResponseEntity<Void> addUser( User user,@RequestParam("rids") List<Long> roleIds){
+//        log.info("添加的用户： "+user.toString()+"分配的角色id: "+roleIds.toString());
+//        userService.saveUser(user,roleIds);
+//        return new ResponseEntity(HttpStatus.CREATED);
+//    }
+   @PostMapping
+    public ResponseEntity<Void> addUser( User user){
+        log.info("添加的用户： "+user.toString());
         userService.addUser(user);
-        return new ResultBean<>(true);
+        return new ResponseEntity(HttpStatus.CREATED);
     }
 
     /**
-     * 根据ID删除
+     * 根据Id获取一个用户
+     * @param userid
+     * @return
+     */
+    @GetMapping("/{id}")
+    public ResponseEntity<User> findUser(@PathVariable("id") Long userid){
+        return ResponseEntity.ok(userService.findUser(userid));
+    }
+
+    /**
+     * 根据用户ID删除用户
      * @param id
      * @return
      */
     @DeleteMapping("/{id}")
-    public ResultBean<Boolean> deleteUser( @PathVariable("id") Long id){
+    public ResponseEntity<Void> deleteUser( @PathVariable("id") Long id){
         userService.deleteUser(id);
-        return new ResultBean<>(true);
+        return ResponseEntity.ok().build();
     }
 
     /**
-     * 更新一条记录
+     * 更新用户
      * @param user
      * @return
      */
     @PutMapping
-    public ResultBean<Boolean> updateUser(User user ){
-        log.info("更新的记录为："+user.toString());
-        log.info(user.getId().toString());
+    public ResponseEntity<Void> updateUser(User user ){
         userService.updateUser(user);
-        return new ResultBean<>(true);
+        return ResponseEntity.ok().build();
+    }
+//用户角色对应添加
+    @PostMapping("role")
+    public ResponseEntity<Void> saveUserRole( @RequestParam("uid") Long userId ,
+                                              @RequestParam("rids") List<Long> roleIds){
+        log.info("userid: "+ userId+ "  roleids "+ roleIds);
+        userService.saveUserRole(userId,roleIds);
+        return  new ResponseEntity(HttpStatus.CREATED);
+    }
+    //删除用户角色关系
+    @DeleteMapping("role")
+    public ResponseEntity<Void> deleteUserRole( @RequestParam("uid") Long userid,
+                                                @RequestParam("rid") Long roleid){
+        log.info("删除的userid"+userid+"删除的角色id"+roleid);
+        userService.deleteUserRole(userid,roleid);
+        return ResponseEntity.ok().build();
     }
 
-    @RequestMapping("test")
-    public String getUser(){
-       User user =  userService.exist("登录名");
-      // log.info("user " + user.toString());
-        log.info("user:");
-       return null; //user.toString();
-    }
+//    @RequestMapping("page")
+//    public ResponseEntity<PageInfo<User>> queryUserByPage(
+//            @RequestParam(value = "page", defaultValue = "1") Integer page,
+//            @RequestParam(value = "rows", defaultValue = "5") Integer rows,
+//            @RequestParam(value = "sortBy", required = false) String sortBy,
+//            @RequestParam(value = "desc", defaultValue = "false") Boolean desc,
+//            @RequestParam(value = "key", required = false) String key
+//    ){
+//        log.info("runing queryUserByPage()");
+//        return ResponseEntity.ok(userService.queryUserByPage(page,rows,sortBy,desc,key));
+//    }
 
 
 }

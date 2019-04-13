@@ -6,8 +6,10 @@ import com.sea.upms.pojo.Role;
 import com.sea.upms.service.RoleService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import sun.java2d.d3d.D3DDrawImage;
+
+import java.util.List;
 
 
 @RestController
@@ -28,7 +30,7 @@ public class RoleController {
      * @return
      */
     @RequestMapping("page")
-    public ResultBean<PageInfo<Role>> queryUserByPage(
+    public ResultBean<PageInfo<Role>> queryRoleByPage(
             @RequestParam(value = "page", defaultValue = "1") Integer page,
             @RequestParam(value = "rows", defaultValue = "5") Integer rows,
             @RequestParam(value = "sortBy", required = false) String sortBy,
@@ -38,6 +40,7 @@ public class RoleController {
         return new ResultBean<>(roleService.queryRoleByPage(page,rows,sortBy,desc,key));
     }
 
+    //添加角色
     @PostMapping
     public ResultBean<Boolean> addRole(Role role ){
         log.info("post add");
@@ -64,19 +67,35 @@ public class RoleController {
      */
     @PutMapping
     public ResultBean<Boolean> updateRole(Role role ){
-        log.info("更新的记录为："+role.toString());
+        log.info("更新角色信息为："+role.toString());
         log.info(role.getId().toString());
         roleService.updateRole(role);
         return new ResultBean<>(true);
     }
 
-//    @RequestMapping("test")
-//    public String getUser(){
-//       User user =  userService.exist("登录名");
-//      // log.info("user " + user.toString());
-//        log.info("user:");
-//       return null; //user.toString();
-//    }
+@GetMapping("/all")
+    public ResponseEntity<List<Role>> queryRole(){
+        return ResponseEntity.ok(roleService.queryRole());
+}
 
+    /**
+     * 通过用户Id，查询该用户拥有的角色
+     * @param id
+     * @return
+     */
+    @GetMapping("user/{id}")
+public  ResponseEntity<List<Role>> getRoleByUuserId(@PathVariable("id") Long id){
+        log.info(" RoleConntroller .getRoleByUuserId页面传过来的用户id为：" + id);
+       return ResponseEntity.ok(roleService.getRoleByUserId(id));
+}
 
+    /**
+     * 根据Id获取一个角色
+     * @param roleId
+     * @return
+     */
+    @GetMapping("/{id}")
+    public ResponseEntity<Role> findUser(@PathVariable("id") Long roleId){
+        return ResponseEntity.ok(roleService.findUser(roleId));
+    }
 }

@@ -1,4 +1,4 @@
-package com.sea.upms.pojo;
+package com.sea.upms.vo;
 
 import lombok.Data;
 import sun.rmi.runtime.Log;
@@ -10,7 +10,7 @@ import javax.persistence.Table;
 @Data
 @NameStyle(Style.camelhumpAndLowercase)
 @Table(name = "sys_user_role")
-public class UserRole
+public class UserRoleVO
 {
     private Long userId;
     private Long roleId;
