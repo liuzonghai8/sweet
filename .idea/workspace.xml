@@ -2,23 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0230be2-32f5-449f-a11b-6794dad42367" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/sweet-auth/sweet-auth-service/src/main/java/com/sea/auth/client/UserClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sweet-auth/sweet-auth-service/src/main/java/com/sea/auth/properties/JwtProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sweet-auth/sweet-auth-service/src/main/java/com/sea/auth/service/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sweet-auth/sweet-auth-service/src/main/java/com/sea/auth/web/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sweet-upms/sweet-upms-interface/src/main/java/api/UserApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet-auth/sweet-auth-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-auth/sweet-auth-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet-auth/sweet-auth-common/src/main/java/com/sea/auth/utils/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-auth/sweet-auth-common/src/main/java/com/sea/auth/utils/JwtUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet-auth/sweet-auth-common/sweet-auth-common.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet-auth/sweet-auth-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-auth/sweet-auth-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet-auth/sweet-auth-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-auth/sweet-auth-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet-auth/sweet-auth.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet-upms/sweet-upms-interface/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-upms/sweet-upms-interface/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/utils/CodecUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sweet-upms/sweet-upms-interface/src/main/java/com/sea/upms/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-upms/sweet-upms-interface/src/main/java/com/sea/upms/pojo/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/web/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/web/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet-upms/sweet-upms-service/target/classes/com/sea/upms/service/RoleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-upms/sweet-upms-service/target/classes/com/sea/upms/service/RoleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet-upms/sweet-upms-service/target/classes/com/sea/upms/web/RoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-upms/sweet-upms-service/target/classes/com/sea/upms/web/RoleController.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/sweet-consult/sweet-consult-service/target/" />
     <ignored path="$PROJECT_DIR$/sweet-auth/sweet-auth-common/target/" />
@@ -42,28 +30,30 @@
     <session id="769910717">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="22" />
+          <entry key="class" value="1" />
+          <entry key="java" value="23" />
           <entry key="xml" value="10" />
           <entry key="yml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="22" />
+          <entry key="CLASS" value="1" />
+          <entry key="JAVA" value="23" />
           <entry key="XML" value="10" />
           <entry key="YAML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="322" />
+          <entry key="java" value="454" />
           <entry key="xml" value="19" />
           <entry key="yml" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="322" />
+          <entry key="JAVA" value="454" />
           <entry key="XML" value="19" />
           <entry key="YAML" value="24" />
         </counts>
@@ -85,15 +75,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sweet-auth/sweet-auth-service/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="924">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-interface/src/main/java/api/UserApi.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
@@ -108,21 +89,42 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/web/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="161" column="47" lean-forward="true" selection-start-line="161" selection-start-column="47" selection-end-line="161" selection-end-column="47" />
+            <state relative-caret-position="548">
+              <caret line="161" column="61" selection-start-line="161" selection-start-column="61" selection-end-line="161" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/service/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1405">
+              <caret line="229" column="41" selection-start-line="229" selection-start-column="31" selection-end-line="229" selection-end-column="41" />
+              <folding>
+                <element signature="e#1047#1048#0" expanded="true" />
+                <element signature="e#1093#1094#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/service/UserService.java">
+        <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/utils/CodecUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="222" column="22" selection-start-line="222" selection-start-column="22" selection-end-line="222" selection-end-column="22" />
+            <state relative-caret-position="616">
+              <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
               <folding>
-                <element signature="e#1047#1048#0" expanded="true" />
-                <element signature="e#1093#1094#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.8.RELEASE/spring-core-5.0.8.RELEASE.jar!/org/springframework/util/DigestUtils.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1530">
+              <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -154,8 +156,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-interface/src/main/java/com/sea/upms/pojo/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="308">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
@@ -165,18 +167,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="286">
               <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sweet-auth/sweet-auth-service/src/main/java/com/sea/auth/properties/JwtProperties.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -194,6 +184,7 @@
     <findStrings>
       <find>UserClient</find>
       <find>queryUser</find>
+      <find>findUserByName</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -213,11 +204,12 @@
         <option value="$PROJECT_DIR$/sweet-auth/sweet-auth-service/src/main/java/com/sea/auth/client/UserClientImpl.java" />
         <option value="$PROJECT_DIR$/sweet-auth/sweet-auth-service/src/main/java/com/sea/auth/client/UserClient.java" />
         <option value="$PROJECT_DIR$/sweet-auth/sweet-auth-common/src/main/java/com/sea/auth/entity/UserInfo.java" />
-        <option value="$PROJECT_DIR$/sweet-upms/sweet-upms-interface/src/main/java/com/sea/upms/pojo/User.java" />
         <option value="$PROJECT_DIR$/sweet-auth/sweet-auth-service/src/main/java/com/sea/auth/service/AuthService.java" />
         <option value="$PROJECT_DIR$/sweet-auth/sweet-auth-service/src/main/java/com/sea/auth/web/AuthController.java" />
+        <option value="$PROJECT_DIR$/sweet-upms/sweet-upms-interface/src/main/java/com/sea/upms/pojo/User.java" />
         <option value="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/web/UserController.java" />
         <option value="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/service/UserService.java" />
+        <option value="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/utils/CodecUtils.java" />
       </list>
     </option>
   </component>
@@ -356,7 +348,18 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="upms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweet" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-upms" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-upms-interface" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="upms" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
@@ -426,7 +429,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555167168267" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555168435892" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../leyou-master" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -435,6 +438,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sea.upms.utils" />
       <recent name="api" />
       <recent name="com.sea.auth.properties" />
       <recent name="com.sea.auth.service" />
@@ -522,12 +526,12 @@
       <workItem from="1551277882214" duration="679000" />
       <workItem from="1551803055629" duration="406000" />
       <workItem from="1554048819308" duration="814000" />
-      <workItem from="1555159097998" duration="7300000" />
+      <workItem from="1555159097998" duration="8361000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6993000" />
+    <option name="totallyTimeSpent" value="8054000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -549,13 +553,13 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32949308" />
       <window_info anchor="bottom" id="Spring" order="7" sideWeight="0.49938422" weight="0.32949308" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49938422" weight="0.29493088" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.32949308" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49938422" weight="0.29411766" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32871974" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" sideWeight="0.49938422" weight="0.32949308" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run Dashboard" order="13" sideWeight="0.49876848" visible="true" weight="0.30565166" />
-      <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.50123155" weight="0.38940093" />
+      <window_info anchor="bottom" id="Run Dashboard" order="13" sideWeight="0.49876848" weight="0.30565166" />
+      <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.50123155" weight="0.38869664" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -726,13 +730,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-interface/src/main/java/com/sea/upms/pojo/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sweet-auth/sweet-auth-service/src/main/java/com/sea/auth/service/AuthService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
@@ -773,20 +770,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-interface/src/main/java/com/sea/upms/pojo/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/web/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="161" column="47" lean-forward="true" selection-start-line="161" selection-start-column="47" selection-end-line="161" selection-end-column="47" />
+        <state relative-caret-position="548">
+          <caret line="161" column="61" selection-start-line="161" selection-start-column="61" selection-end-line="161" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="222" column="22" selection-start-line="222" selection-start-column="22" selection-end-line="222" selection-end-column="22" />
+        <state relative-caret-position="1405">
+          <caret line="229" column="41" selection-start-line="229" selection-start-column="31" selection-end-line="229" selection-end-column="41" />
           <folding>
             <element signature="e#1047#1048#0" expanded="true" />
             <element signature="e#1093#1094#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.8.RELEASE/spring-core-5.0.8.RELEASE.jar!/org/springframework/util/DigestUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1530">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/utils/CodecUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

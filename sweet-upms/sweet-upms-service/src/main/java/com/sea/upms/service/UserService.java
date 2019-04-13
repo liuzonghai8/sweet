@@ -197,7 +197,7 @@ public class UserService {
     public User findUserByUser(String userName,String password) {
         log.info("user-servesi-findUserByUser");
         User u = new User();
-        u.setLoginName(userName);
+        u.setUsername(userName);
         u.setPassword(password);
         log.info(u.toString());
         return u;
@@ -215,11 +215,20 @@ public class UserService {
         return userVo;
     }
 
-    public User queryUser(String username, String password) {
+    /**
+     * 根据用户名查询，再判断密码是否正确
+     * @param username
+     * @param password
+     * @return
+     */
+    public User findUserByName(String username, String password) {
         User user = new User();
-        user.setLoginName(username);
+        user.setUsername(username);
         user.setPassword(password);
         User result = userMapper.selectOne(user);
+        log.info("query user: ",result);
+        if(!StringUtils.equals(CodecUtils.md5Hex(password, user.getSalt()), user.getPassword()))
+            result = null;
 
 
         return result;

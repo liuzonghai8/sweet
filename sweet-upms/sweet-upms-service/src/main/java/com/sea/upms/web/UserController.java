@@ -159,7 +159,7 @@ public class UserController {
            @RequestParam("username") String username,
            @RequestParam("password") String password
    ){
-        return new ResultDTO<User>(userService.queryUser(username,password));
+        return new ResultDTO<User>(userService.findUserByName(username,password));
    }
 
 }

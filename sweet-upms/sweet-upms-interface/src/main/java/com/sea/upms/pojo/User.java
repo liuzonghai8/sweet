@@ -17,7 +17,7 @@ public class User {
     @Id
     @KeySql(useGeneratedKeys = true)
     private Long id;
-    private  String loginName;
+    private  String username;
     private  String realName;
     @JsonIgnore
     private String password;
