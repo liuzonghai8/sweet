@@ -82,7 +82,7 @@ public class MenuService {
     }
 
     public void updateMenu(Menu menu) {
-        menuMapper.updateByPrimaryKey(menu);
+        menuMapper.updateByPrimaryKeySelective(menu);
     }
 
     public void deleteMenu(Integer id) {

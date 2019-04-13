@@ -6,11 +6,9 @@ import tk.mybatis.mapper.annotation.KeySql;
 import tk.mybatis.mapper.annotation.NameStyle;
 import tk.mybatis.mapper.code.Style;
 
-import javax.management.relation.Role;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Transient;
-import java.util.List;
+import java.time.LocalDateTime;
 
 @Data
 @NameStyle(Style.camelhumpAndLowercase)
@@ -26,6 +24,11 @@ public class User {
     private  String phone;
     private String avatar;
     private String enableTag;
+    @JsonIgnore
+    private String salt; //私有盐
+    private LocalDateTime createTime;
+    private LocalDateTime updateTime;
+    private String intro;
 //    @Transient
 //    private List<Role> roles; //用户对应的角色集合
 

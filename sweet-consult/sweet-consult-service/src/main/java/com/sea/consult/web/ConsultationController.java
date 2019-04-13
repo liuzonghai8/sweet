@@ -1,7 +1,7 @@
 package com.sea.consult.web;
 
 import com.github.pagehelper.PageInfo;
-import com.sea.common.vo.ResultBean;
+import com.sea.common.vo.ResultDTO;
 import com.sea.consult.pojo.ConsultationRecord;
 import com.sea.consult.service.ConsultationRecordService;
 import lombok.extern.slf4j.Slf4j;
@@ -28,14 +28,14 @@ public class ConsultationController {
      * @return
      */
     @RequestMapping("page")
-    public ResultBean<PageInfo<ConsultationRecord>> queryConsultByPage(
+    public ResultDTO<PageInfo<ConsultationRecord>> queryConsultByPage(
             @RequestParam(value = "page", defaultValue = "1") Integer page,
             @RequestParam(value = "rows", defaultValue = "5") Integer rows,
             @RequestParam(value = "sortBy", required = false) String sortBy,
             @RequestParam(value = "desc", defaultValue = "false") Boolean desc,
             @RequestParam(value = "key", required = false) String key
     ){
-        return new ResultBean<>(this.consultationRecordService.queryConsultByPage(page,rows,sortBy,desc,key));
+        return new ResultDTO<>(this.consultationRecordService.queryConsultByPage(page,rows,sortBy,desc,key));
     }
 
     /**
@@ -44,12 +44,12 @@ public class ConsultationController {
      * @return
      */
     @PostMapping
-    public ResultBean<Boolean> addConsult( ConsultationRecord consultationRecord ){
+    public ResultDTO<Boolean> addConsult(ConsultationRecord consultationRecord ){
         log.info("post add");
         log.info(consultationRecord.toString());
         consultationRecord.setRecordDate(new Date());
         this.consultationRecordService.addConsult(consultationRecord);
-        return new ResultBean<>(true);
+        return new ResultDTO<>(true);
     }
 
     /**
@@ -58,9 +58,9 @@ public class ConsultationController {
      * @return
      */
     @DeleteMapping("/{id}")
-    public ResultBean<Boolean> deleteConsult( @PathVariable("id") Long id){
+    public ResultDTO<Boolean> deleteConsult(@PathVariable("id") Long id){
         this.consultationRecordService.deleteConsult(id);
-        return new ResultBean<>(true);
+        return new ResultDTO<>(true);
     }
 
     /**
@@ -69,11 +69,11 @@ public class ConsultationController {
      * @return
      */
     @PutMapping
-    public ResultBean<Boolean> updateConsult(ConsultationRecord consultationRecord){
+    public ResultDTO<Boolean> updateConsult(ConsultationRecord consultationRecord){
         log.info("更新的记录为："+consultationRecord.toString());
         log.info(consultationRecord.getId().toString());
         //this.consultationRecordService.updateConsult(cr);
-        return new ResultBean<>(true);
+        return new ResultDTO<>(true);
     }
 
 }

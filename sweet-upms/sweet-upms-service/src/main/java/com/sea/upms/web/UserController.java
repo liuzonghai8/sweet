@@ -1,8 +1,11 @@
 package com.sea.upms.web;
 
-import com.github.pagehelper.PageInfo;
+import com.sea.common.vo.PageResult;
+import com.sea.common.vo.ResultDTO;
+import com.sea.upms.dto.UserDTO;
 import com.sea.upms.pojo.User;
 import com.sea.upms.service.UserService;
+import com.sea.upms.vo.UserVo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -30,15 +33,15 @@ public class UserController {
      * @return
      */
     @RequestMapping("page")
-    public ResponseEntity<PageInfo<User>> queryUserByPage(
+    public ResultDTO<PageResult<UserVo>> queryUserByPage(
             @RequestParam(value = "page", defaultValue = "1") Integer page,
             @RequestParam(value = "rows", defaultValue = "5") Integer rows,
             @RequestParam(value = "sortBy", required = false) String sortBy,
             @RequestParam(value = "desc", defaultValue = "false") Boolean desc,
             @RequestParam(value = "key", required = false) String key
     ){
-        log.info("runing queryUserByPage()");
-        return ResponseEntity.ok(userService.queryUserByPage(page,rows,sortBy,desc,key));
+        log.info("page"+page+"rows"+rows+"sortBy"+sortBy+"desc"+desc+"key"+key);
+        return new ResultDTO<>(userService.queryUserByPage(page,rows,sortBy,desc,key));
     }
 
 //    @PostMapping
@@ -47,11 +50,15 @@ public class UserController {
 //        userService.saveUser(user,roleIds);
 //        return new ResponseEntity(HttpStatus.CREATED);
 //    }
+
+    /**
+     * 添加用户
+     * @param userDTO
+     * @return
+     */
    @PostMapping
-    public ResponseEntity<Void> addUser( User user){
-        log.info("添加的用户： "+user.toString());
-        userService.addUser(user);
-        return new ResponseEntity(HttpStatus.CREATED);
+    public ResultDTO<Boolean> addUser( UserDTO userDTO){
+        return new ResultDTO<Boolean>(userService.addUser(userDTO));
     }
 
     /**
@@ -59,9 +66,18 @@ public class UserController {
      * @param userid
      * @return
      */
+  //  @GetMapping("/{id}")
+    public ResultDTO<User> findUser(@PathVariable("id") Long userid){
+        return new ResultDTO<>(userService.findUser(userid));
+    }
+    /**
+     * 根据Id获取一个用户所有信息
+     * @param userid
+     * @return
+     */
     @GetMapping("/{id}")
-    public ResponseEntity<User> findUser(@PathVariable("id") Long userid){
-        return ResponseEntity.ok(userService.findUser(userid));
+    public ResultDTO<UserVo> findUserAllInfo(@PathVariable("id") Long userid){
+        return new ResultDTO<>(userService.findUserAllInfo(userid));
     }
 
     /**
@@ -70,20 +86,18 @@ public class UserController {
      * @return
      */
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteUser( @PathVariable("id") Long id){
-        userService.deleteUser(id);
-        return ResponseEntity.ok().build();
+    public ResultDTO<Boolean> deleteUser(@PathVariable("id") Long id){
+        return new ResultDTO<Boolean>( userService.deleteUser(id));
     }
 
     /**
      * 更新用户
-     * @param user
+     * @param userDTO
      * @return
      */
     @PutMapping
-    public ResponseEntity<Void> updateUser(User user ){
-        userService.updateUser(user);
-        return ResponseEntity.ok().build();
+    public ResultDTO<Boolean> updateUser(UserDTO userDTO ){
+        return new ResultDTO<Boolean>( userService.updateUser(userDTO));
     }
 //用户角色对应添加
     @PostMapping("role")
@@ -100,6 +114,34 @@ public class UserController {
         log.info("删除的userid"+userid+"删除的角色id"+roleid);
         userService.deleteUserRole(userid,roleid);
         return ResponseEntity.ok().build();
+    }
+
+    /**
+     * 根据用户名登陆
+     * @param userName
+     * @param password
+     * @return
+     */
+    @PostMapping("login")
+    public ResultDTO<User> login(@RequestParam("username") String userName,
+                                 @RequestParam("password") String password){
+        return new ResultDTO<>(userService.findUserByUser(userName,password));
+    }
+
+    @GetMapping("info")
+    public String getUserInfo(){
+        return "{roles: ['admin','edit']}";
+    }
+
+    @PostMapping("logout")
+    public String logOut(){
+        //设置用户的token为空
+        return "seccuss";
+    }
+
+    @GetMapping("test")
+    public String test(){
+        return "test API success!";
     }
 
 //    @RequestMapping("page")

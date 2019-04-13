@@ -18,6 +18,7 @@ zuul:
   routes:
     consult-service: /consult/**
     upms-service: /upms/**
+    auth-service: /auth/**
   #routes:
    #   upms-service: /upms/** # 将用户服务映射到/upms/**
 ribbon:
