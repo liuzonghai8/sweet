@@ -29,6 +29,8 @@ public class User {
     private LocalDateTime createTime;
     private LocalDateTime updateTime;
     private String intro;
+
+
 //    @Transient
 //    private List<Role> roles; //用户对应的角色集合
 

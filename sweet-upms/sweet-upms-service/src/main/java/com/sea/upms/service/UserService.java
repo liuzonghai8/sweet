@@ -32,7 +32,7 @@ public class UserService {
     @Autowired
     private UserMapper userMapper;
 
-    public List<User> queryUser(){
+    public List<User> queryAllUser(){
         return  userMapper.selectAll();
     }
 
@@ -213,5 +213,15 @@ public class UserService {
         userVo.setRoles(roles);
         log.info("select cesscuss,userId:{}, userVo:{}",userid,userVo);
         return userVo;
+    }
+
+    public User queryUser(String username, String password) {
+        User user = new User();
+        user.setLoginName(username);
+        user.setPassword(password);
+        User result = userMapper.selectOne(user);
+
+
+        return result;
     }
 }
