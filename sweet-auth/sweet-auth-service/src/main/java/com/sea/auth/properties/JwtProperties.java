@@ -1,6 +1,7 @@
 package com.sea.auth.properties;
 
 import com.sea.auth.utils.RsaUtils;
+import com.sea.upms.pojo.User;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -16,7 +17,7 @@ import java.security.PublicKey;
  */
 @Slf4j
 @Data
-@ConfigurationProperties(prefix = "ly.jwt")
+@ConfigurationProperties(prefix = "sea.jwt")
 public class JwtProperties {
 
     private String secret;
@@ -41,6 +42,8 @@ public class JwtProperties {
             //首先判断公钥私钥是否存在，不存在则先生成公钥私钥
             File pubKey = new File(pubKeyPath);
             File priKey = new File(priKeyPath);
+            log.info("pubkeypath: ",pubKeyPath);
+            log.info("prikeypath:",privateKey);
 
             if (!pubKey.exists() || !priKey.exists()) {
                 //创建公钥，私钥

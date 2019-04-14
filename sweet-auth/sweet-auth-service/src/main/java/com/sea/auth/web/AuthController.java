@@ -5,6 +5,7 @@ import com.sea.auth.service.AuthService;
 import com.sea.common.vo.ResultDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,6 +21,7 @@ public class AuthController {
     @Autowired
     private JwtProperties jwtProperties;
 
+    @PostMapping("/login")
     public ResultDTO<Void> login(
             @RequestParam("username") String username,
             @RequestParam("password") String password,

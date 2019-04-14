@@ -17,9 +17,9 @@ eureka:
 
 sea:
   jwt:
-    secret: ly@Login(Auth}*^31)&yun6%f3q2 # 登录校验的密钥
-    pubKeyPath: /Users/bystander/id_rsa.pub # 公钥地址
-    priKeyPath: /Users/bystander/id_rsa.pri # 私钥地址
+    secret: sea@Login(Auth}*^31)&yun6%f3q2 # 登录校验的密钥
+    pubKeyPath: /E/bystander/id_rsa.pub # 公钥地址
+    priKeyPath: /E/bystander/id_rsa.pri # 私钥地址
     expire: 30 # 过期时间,单位分钟
     cookieName: ACCSSE_TOKEN
     cookieMaxAge: 1800

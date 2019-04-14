@@ -29,12 +29,14 @@ public class AuthService {
     public String login(String username, String password) {
         try {
             User user = userClient.queryUser(username, password);
+            log.info("查询到的用户为 {}",user);
             if (user == null) {
                 return null;
             }
-            UserInfo userInfo = new UserInfo(user.getId(), user.getLoginName());
+            UserInfo userInfo = new UserInfo(user.getId(), user.getUsername());
             //生成Token
             String token = JwtUtils.generateToken(userInfo, props.getPrivateKey(), props.getExpire());
+            log.info("----生成的token为：{}------",token);
             return token;
         } catch (Exception e) {
             log.error("【授权中心】用户名和密码错误，用户名：{}", username,e);

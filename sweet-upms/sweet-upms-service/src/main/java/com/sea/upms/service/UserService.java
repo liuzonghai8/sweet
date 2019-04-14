@@ -9,6 +9,7 @@ import com.sea.upms.dto.UserDTO;
 import com.sea.upms.mapper.UserMapper;
 import com.sea.upms.pojo.Role;
 import com.sea.upms.pojo.User;
+import com.sea.upms.utils.CodecUtils;
 import com.sea.upms.vo.UserVo;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
