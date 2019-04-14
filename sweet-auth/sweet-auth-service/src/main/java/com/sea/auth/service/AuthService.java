@@ -27,7 +27,9 @@ public class AuthService {
 
 
     public String login(String username, String password) {
+        log.info("---------login message:---------");
         try {
+            log.info("--------try in---------");
             User user = userClient.queryUser(username, password);
             log.info("查询到的用户为 {}",user);
             if (user == null) {

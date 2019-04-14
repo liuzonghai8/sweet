@@ -223,15 +223,13 @@ public class UserService {
      * @return
      */
     public User findUserByName(String username, String password) {
-        log.info("------username:{}--passsword:{}---",username,password);
-        User user = new User();
-        user.setUsername(username);
-        User result = userMapper.selectOne(user);
-        //log.info("query user: ",result);
+        User t = new User();
+        t.setUsername(username);
+        User user = userMapper.selectOne(t);
+        log.info("select user is :",user);
         /*if(!StringUtils.equals(CodecUtils.md5Hex(password, user.getSalt()), user.getPassword()))
             result = null;*/
 
-
-        return user;//result;
+        return user;
     }
 }

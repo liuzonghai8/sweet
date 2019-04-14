@@ -4,6 +4,7 @@ import com.sea.auth.properties.JwtProperties;
 import com.sea.auth.service.AuthService;
 import com.sea.common.utils.CookieUtils;
 import com.sea.common.vo.ResultDTO;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @RestController
+@Slf4j
 @EnableConfigurationProperties(JwtProperties.class)
 public class AuthController {
     @Autowired
@@ -29,8 +31,9 @@ public class AuthController {
             HttpServletRequest request,
             HttpServletResponse response
     ){
-        String token;
-        token = authService.login(username,password);
+        
+        String token = authService.login(username,password);
+
         CookieUtils.newBuilder(response).httpOnly().maxAge(jwtProperties.getCookieMaxAge()).request(request).build(jwtProperties.getCookieName(), token);
         return new ResultDTO<>();
 

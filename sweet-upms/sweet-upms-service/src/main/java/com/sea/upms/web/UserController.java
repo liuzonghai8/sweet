@@ -122,7 +122,7 @@ public class UserController {
      * @param password
      * @return
      */
-    @PostMapping("login")
+    @PostMapping("login2")
     public ResultDTO<User> login(@RequestParam("username") String userName,
                                  @RequestParam("password") String password){
         return new ResultDTO<>(userService.findUserByUser(userName,password));
@@ -155,12 +155,13 @@ public class UserController {
 //        log.info("runing queryUserByPage()");
 //        return ResponseEntity.ok(userService.queryUserByPage(page,rows,sortBy,desc,key));
 //    }
-    @PostMapping("login2")
-   public ResultDTO<User> queryUser(
+    @PostMapping("query")
+   public User queryUser(
            @RequestParam("username") String username,
            @RequestParam("password") String password
    ){
-        return new ResultDTO<User>(userService.findUserByName(username,password));
+        return  userService.findUserByName(username,password);
+        //return new ResultDTO<User>(userService.findUserByName(username,password));
    }
 
 }
