@@ -200,7 +200,7 @@ public class UserService {
         User u = new User();
         u.setUsername(userName);
         u.setPassword(password);
-        log.info(u.toString());
+        log.info("----u的信息为：-----",u.toString());
         return u;
         //return userMapper.selectOneByExample(u);
     }
@@ -223,15 +223,15 @@ public class UserService {
      * @return
      */
     public User findUserByName(String username, String password) {
+        log.info("------username:{}--passsword:{}---",username,password);
         User user = new User();
         user.setUsername(username);
-        user.setPassword(password);
         User result = userMapper.selectOne(user);
-        log.info("query user: ",result);
-        if(!StringUtils.equals(CodecUtils.md5Hex(password, user.getSalt()), user.getPassword()))
-            result = null;
+        //log.info("query user: ",result);
+        /*if(!StringUtils.equals(CodecUtils.md5Hex(password, user.getSalt()), user.getPassword()))
+            result = null;*/
 
 
-        return result;
+        return user;//result;
     }
 }

@@ -2,6 +2,7 @@ package com.sea.auth.web;
 
 import com.sea.auth.properties.JwtProperties;
 import com.sea.auth.service.AuthService;
+import com.sea.common.utils.CookieUtils;
 import com.sea.common.vo.ResultDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -28,8 +29,10 @@ public class AuthController {
             HttpServletRequest request,
             HttpServletResponse response
     ){
-        String token = authService.login(username,password);
-        return null;
+        String token;
+        token = authService.login(username,password);
+        CookieUtils.newBuilder(response).httpOnly().maxAge(jwtProperties.getCookieMaxAge()).request(request).build(jwtProperties.getCookieName(), token);
+        return new ResultDTO<>();
 
     }
 }
