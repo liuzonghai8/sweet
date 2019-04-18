@@ -1,9 +1,6 @@
 package api;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import com.sea.upms.pojo.User;
@@ -12,6 +9,7 @@ import com.sea.upms.pojo.User;
  * @author bystander
  * @date 2018/10/1
  */
+@RequestMapping("sys/user")
 public interface UserApi {
 
     /**

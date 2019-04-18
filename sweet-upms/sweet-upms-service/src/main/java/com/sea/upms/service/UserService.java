@@ -227,6 +227,7 @@ public class UserService {
         t.setUsername(username);
         User user = userMapper.selectOne(t);
         log.info("select user is :",user);
+        // TODO 对查询返回的密码进行验证
         /*if(!StringUtils.equals(CodecUtils.md5Hex(password, user.getSalt()), user.getPassword()))
             result = null;*/
 

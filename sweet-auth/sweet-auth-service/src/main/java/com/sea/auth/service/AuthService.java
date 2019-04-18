@@ -27,14 +27,10 @@ public class AuthService {
 
 
     public String login(String username, String password) {
-        log.info("---------login message:---------");
+        log.info("------前端传输过来的username:{}，AND Password：{}-------",username,password);
         try {
-            log.info("--------try in---------");
-            //User user = userClient.queryUser(username, password);
-            User user = new User();
-            user.setId(120L);
-            user.setUsername("lzh");
-            log.info("查询到的用户为 {}",user);
+            User user = userClient.queryUser(username, password);
+            log.info("从数据库查询到的用户为 {}",user);
             if (user == null) {
                 return null;
             }
