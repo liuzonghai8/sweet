@@ -30,7 +30,10 @@ public class AuthService {
         log.info("---------login message:---------");
         try {
             log.info("--------try in---------");
-            User user = userClient.queryUser(username, password);
+            //User user = userClient.queryUser(username, password);
+            User user = new User();
+            user.setId(120L);
+            user.setUsername("lzh");
             log.info("查询到的用户为 {}",user);
             if (user == null) {
                 return null;

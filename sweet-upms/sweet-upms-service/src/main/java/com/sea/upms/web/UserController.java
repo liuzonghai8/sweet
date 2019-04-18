@@ -35,7 +35,7 @@ public class UserController {
     @RequestMapping("page")
     public ResultDTO<PageResult<UserVo>> queryUserByPage(
             @RequestParam(value = "page", defaultValue = "1") Integer page,
-            @RequestParam(value = "rows", defaultValue = "5") Integer rows,
+            @RequestParam(value = "rows", defaultValue = "10") Integer rows,
             @RequestParam(value = "sortBy", required = false) String sortBy,
             @RequestParam(value = "desc", defaultValue = "false") Boolean desc,
             @RequestParam(value = "key", required = false) String key

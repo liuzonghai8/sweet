@@ -13,7 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 public class UserVo {
     private Long id;
-    private  String loginName;
+    private  String username;
     private  String realName;
     private  String phone;
     private String avatar;
