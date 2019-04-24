@@ -19,6 +19,8 @@ zuul:
     consult-service: /consult/**
     upms-service: /upms/**
     auth-service: /auth/**
+  add-host-header: true
+  SensitiveHeaders:
   #routes:
    #   upms-service: /upms/** # 将用户服务映射到/upms/**
 ribbon:
