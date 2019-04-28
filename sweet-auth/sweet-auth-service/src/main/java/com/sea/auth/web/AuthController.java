@@ -42,14 +42,14 @@ public class AuthController {
     /**
      * 注销登录
      *
-     * @param token
+     * @param token "SWEET_TOKEN"
      * @param response
      * @return
      */
-    @GetMapping("logout")
-    public ResponseEntity<Void> logout(@CookieValue("ACCSSE_TOKEN") String token, HttpServletResponse response) {
+    @GetMapping("/logout")
+    public ResponseEntity<Void> logout(@CookieValue("SWEET_TOKEN") String token, HttpServletResponse response) {
 
-       log.info("token:{}",token);
+       log.info("_-------logout -token:{}----------",token);
         if (StringUtils.isNotBlank(token)) {
             CookieUtils.newBuilder(response).maxAge(0).build(jwtProperties.getCookieName(), token);
         }

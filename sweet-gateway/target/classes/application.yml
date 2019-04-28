@@ -36,3 +36,11 @@ hystrix:
         isolation:
           thread:
             timeoutInMillisecond: 10000 # 熔断超时时长：10000ms
+sea:
+    jwt:
+      pubkeypath: E:/bystander/id_rsa.pub # 公钥地址
+      cookieName: SWEET_TOKEN  #token 名称
+    filter:
+      allowPaths:
+        - /api/auth/login
+        - /api/auth/logout
