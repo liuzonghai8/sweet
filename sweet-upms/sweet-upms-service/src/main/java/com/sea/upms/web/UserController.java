@@ -7,6 +7,7 @@ import com.sea.upms.pojo.User;
 import com.sea.upms.service.UserService;
 import com.sea.upms.vo.UserVo;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -129,8 +130,11 @@ public class UserController {
     }
 
     @GetMapping("info")
-    public String getUserInfo(){
-        return "{roles: ['admin','edit']}";
+    public ResultDTO<UserVo> getUserInfo(@CookieValue("SWEET_TOKEN") String token){
+         UserVo userVo = new UserVo();
+         log.info("getUserInfo params : ",token);
+
+        return new ResultDTO<>(userVo);
     }
 
     @PostMapping("logout")
@@ -163,5 +167,6 @@ public class UserController {
         return  userService.findUserByName(username,password);
         //return new ResultDTO<User>(userService.findUserByName(username,password));
    }
+
 
 }

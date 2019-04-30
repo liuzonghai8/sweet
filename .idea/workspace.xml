@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd5ab088-7cda-4c36-a1cf-e7e2c14ead27" name="Default" comment="create registry">
-      <change afterPath="$PROJECT_DIR$/sweet-gateway/src/main/java/com/sea/gareway/filter/LoginFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sweet-gateway/src/main/java/com/sea/gareway/properties/FilterProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sweet-gateway/src/main/java/com/sea/gareway/properties/JwtProperties.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet-auth/sweet-auth-service/src/main/java/com/sea/auth/web/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-auth/sweet-auth-service/src/main/java/com/sea/auth/web/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet-auth/sweet-auth-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-auth/sweet-auth-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet-gateway/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-gateway/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/web/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/web/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet-upms/sweet-upms-service/target/classes/com/sea/upms/web/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-upms/sweet-upms-service/target/classes/com/sea/upms/web/UserController.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/sweet-auth/sweet-auth-common/target/" />
     <ignored path="$PROJECT_DIR$/sweet-upms/sweet-upms-service/target/" />
@@ -41,15 +35,66 @@
     </favorites_list>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+    <leaf>
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/web/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="66" column="20" lean-forward="true" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserVo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-interface/src/main/java/com/sea/upms/vo/UserVo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="53">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="AuthController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sweet-auth/sweet-auth-service/src/main/java/com/sea/auth/web/AuthController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="55" selection-start-line="55" selection-end-line="55" />
+            <state relative-caret-position="-358">
+              <caret line="28" column="27" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sweet-auth/sweet-auth-service/src/main/java/com/sea/auth/service/AuthService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="36" column="79" lean-forward="true" selection-start-line="36" selection-start-column="79" selection-end-line="36" selection-end-column="79" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JwtUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sweet-auth/sweet-auth-common/src/main/java/com/sea/auth/utils/JwtUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="999">
+              <caret line="70" column="3" selection-start-line="70" selection-start-column="3" selection-end-line="71" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserInfo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sweet-auth/sweet-auth-common/src/main/java/com/sea/auth/entity/UserInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -80,10 +125,8 @@
         <option value="$PROJECT_DIR$/sweet-auth/sweet-auth-service/src/main/java/com/sea/auth/SweetAuthApplication.java" />
         <option value="$PROJECT_DIR$/sweet-common/src/main/java/com/sea/common/vo/ResultDTO.java" />
         <option value="$PROJECT_DIR$/sweet-upms/sweet-upms-interface/src/main/java/com/sea/upms/vo/UserVo.java" />
-        <option value="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/web/UserController.java" />
         <option value="$PROJECT_DIR$/sweet-upms/sweet-upms-interface/src/main/java/api/UserApi.java" />
         <option value="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/service/UserService.java" />
-        <option value="$PROJECT_DIR$/sweet-auth/sweet-auth-service/src/main/java/com/sea/auth/service/AuthService.java" />
         <option value="$PROJECT_DIR$/sweet-gateway/src/main/java/com/sea/gareway/config/GlobalCorsConfig.java" />
         <option value="$PROJECT_DIR$/sweet-gateway/src/main/java/com/sea/gareway/config/JwtProperties.java" />
         <option value="$PROJECT_DIR$/sweet-gateway/src/main/java/com/sea/gareway/properties/JwtProperties.java" />
@@ -95,7 +138,10 @@
         <option value="$PROJECT_DIR$/sweet-gateway/src/main/java/com/sea/gareway/filter/LoginFilter.java" />
         <option value="$PROJECT_DIR$/sweet-auth/sweet-auth-service/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/sweet-gateway/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/web/UserController.java" />
         <option value="$PROJECT_DIR$/sweet-auth/sweet-auth-service/src/main/java/com/sea/auth/web/AuthController.java" />
+        <option value="$PROJECT_DIR$/sweet-auth/sweet-auth-service/src/main/java/com/sea/auth/service/AuthService.java" />
+        <option value="$PROJECT_DIR$/sweet-auth/sweet-auth-common/src/main/java/com/sea/auth/entity/UserInfo.java" />
       </list>
     </option>
   </component>
@@ -140,8 +186,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -164,20 +210,14 @@
               <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
               <item name="sweet" type="462c0819:PsiDirectoryNode" />
               <item name="sweet-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="sweet-auth-service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sweet" type="462c0819:PsiDirectoryNode" />
-              <item name="sweet-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="sweet-auth-service" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-auth-common" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
               <item name="sweet" type="462c0819:PsiDirectoryNode" />
               <item name="sweet-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="sweet-auth-service" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-auth-common" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -185,7 +225,7 @@
               <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
               <item name="sweet" type="462c0819:PsiDirectoryNode" />
               <item name="sweet-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="sweet-auth-service" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-auth-common" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -194,7 +234,7 @@
               <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
               <item name="sweet" type="462c0819:PsiDirectoryNode" />
               <item name="sweet-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="sweet-auth-service" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-auth-common" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -204,18 +244,85 @@
               <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
               <item name="sweet" type="462c0819:PsiDirectoryNode" />
               <item name="sweet-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="sweet-auth-service" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-auth-common" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweet" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-auth" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-auth-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweet" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-upms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweet" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-upms" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-upms-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweet" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-upms" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-upms-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweet" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-upms" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-upms-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweet" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-upms" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-upms-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweet" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-upms" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-upms-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="upms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweet" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-upms" type="462c0819:PsiDirectoryNode" />
+              <item name="sweet-upms-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="upms" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -423,7 +530,9 @@
       <workItem from="1556021011291" duration="2803000" />
       <workItem from="1556073138870" duration="2383000" />
       <workItem from="1556156245159" duration="18700000" />
-      <workItem from="1556413238545" duration="13018000" />
+      <workItem from="1556413238545" duration="13734000" />
+      <workItem from="1556507915936" duration="1292000" />
+      <workItem from="1556585079080" duration="4394000" />
     </task>
     <task id="LOCAL-00001" summary="create registry">
       <created>1545369121971</created>
@@ -436,7 +545,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84115000" />
+    <option name="totallyTimeSpent" value="90517000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -448,8 +557,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <layout>
       <window_info anchor="right" id="PlantUML" order="3" weight="0.32875723" />
       <window_info anchor="right" id="Palette" order="10" />
@@ -469,12 +577,12 @@
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="6" weight="0.32678822" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="bottom" id="Run Dashboard" order="12" sideWeight="0.49927744" visible="true" weight="0.37447405" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="12" sideWeight="0.49927744" visible="true" weight="0.21598879" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.87657785" />
       <window_info anchor="bottom" auto_hide="true" x="28" y="311" width="1384" height="237" id="Run" order="2" sideWeight="0.49927744" type="SLIDING" weight="0.5126405" />
       <window_info anchor="bottom" id="Spring" order="9" sideWeight="0.49927744" weight="0.32819074" />
       <window_info anchor="bottom" id="Terminal" order="14" sideWeight="0.49566475" weight="0.3085554" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4906054" visible="true" weight="0.27095374" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4906054" visible="true" weight="0.22687861" />
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.32875723" />
       <window_info id="Web" order="6" sideWeight="0.5093946" side_tool="true" weight="0.29768786" />
       <window_info anchor="right" id="Theme Preview" order="8" />
@@ -488,6 +596,7 @@
       <window_info anchor="bottom" id="Find" order="1" weight="0.32959327" />
     </layout>
     <layout-to-restore>
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Designer" order="2" />
       <window_info anchor="right" id="PlantUML" order="3" weight="0.32947975" />
       <window_info anchor="right" id="Palette" order="10" />
@@ -510,7 +619,6 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32819074" />
       <window_info anchor="right" id="Maven Projects" order="4" weight="0.18569364" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32959327" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48958334" visible="true" weight="0.27601156" />
       <window_info anchor="right" id="Database" order="6" weight="0.32875723" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -519,7 +627,7 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Structure" order="1" sideWeight="0.5104167" side_tool="true" weight="0.30419075" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32959327" />
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.32875723" />
       <window_info active="true" anchor="bottom" id="Run Dashboard" order="13" sideWeight="0.49927744" visible="true" weight="0.22720897" />
     </layout-to-restore>
@@ -587,12 +695,6 @@
           <properties />
           <option name="timeStamp" value="26" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/sweet-auth/sweet-auth-service/src/main/java/com/sea/auth/web/AuthController.java</url>
-          <line>53</line>
-          <properties />
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
       </breakpoints>
       <option name="time" value="28" />
     </breakpoint-manager>
@@ -611,34 +713,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://H:/maven/repository3/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32-sources.jar!/org/apache/catalina/valves/ErrorReportValve.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="96" selection-start-line="96" selection-end-line="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://H:/maven/repository3/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32-sources.jar!/org/apache/catalina/core/StandardEngineValve.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="88" selection-start-line="88" selection-end-line="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://H:/maven/repository3/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32-sources.jar!/org/apache/catalina/connector/CoyoteAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="344" selection-start-line="344" selection-end-line="344" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://H:/maven/repository3/org/apache/tomcat/embed/tomcat-embed-core/8.5.32/tomcat-embed-core-8.5.32-sources.jar!/org/apache/coyote/http11/Http11Processor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="805" selection-start-line="805" selection-end-line="805" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sweet-gateway/src/main/java/com/sea/gareway/config/GlobalCorsConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -685,9 +759,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="16" column="24" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -695,9 +766,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -705,10 +773,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-27">
           <caret line="1401" column="19" selection-start-line="1401" selection-start-column="19" selection-end-line="1401" selection-end-column="19" />
-          <folding>
-            <element signature="e#55800#55801#0" expanded="true" />
-            <element signature="e#55844#55845#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -750,20 +814,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sweet-gateway/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="999">
-          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://H:/maven/repository3/com/netflix/zuul/zuul-core/1.3.1/zuul-core-1.3.1-sources.jar!/com/netflix/zuul/context/RequestContext.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="48" column="22" lean-forward="true" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -785,9 +839,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="233" selection-start-line="233" selection-end-line="233" />
-          <folding>
-            <element signature="e#7564#7565#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -795,9 +846,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="1496" selection-start-line="1496" selection-end-line="1496" />
-          <folding>
-            <element signature="e#57718#57719#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -805,9 +853,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="93">
           <caret line="141" selection-start-line="141" selection-end-line="141" />
-          <folding>
-            <element signature="e#4687#4688#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -815,9 +860,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="93">
           <caret line="102" selection-start-line="102" selection-end-line="102" />
-          <folding>
-            <element signature="e#3009#3010#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -853,9 +895,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2361">
           <caret line="161" selection-start-line="161" selection-end-line="161" />
-          <folding>
-            <element signature="e#5070#5071#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -894,13 +933,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sweet-auth/sweet-auth-common/src/main/java/com/sea/auth/entity/UserInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sweet-auth/sweet-auth-common/src/main/java/com/sea/auth/entity/JwtConstants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -908,23 +940,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sweet-auth/sweet-auth-common/src/main/java/com/sea/auth/utils/JwtUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="79" selection-start-line="79" selection-end-line="79" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sweet-gateway/src/main/java/com/sea/gareway/filter/LoginFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
           <caret line="86" selection-start-line="86" selection-end-line="86" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -978,12 +997,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
           <caret line="119" selection-start-line="119" selection-end-line="119" />
-          <folding>
-            <element signature="e#1764#1765#0" expanded="true" />
-            <element signature="e#1814#1815#0" expanded="true" />
-            <element signature="e#2113#2114#0" expanded="true" />
-            <element signature="e#2161#2162#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1001,10 +1014,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sweet-gateway/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="999">
+          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/UpmsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-interface/src/main/java/com/sea/upms/vo/UserVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweet-auth/sweet-auth-common/src/main/java/com/sea/auth/utils/JwtUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="999">
+          <caret line="70" column="3" selection-start-line="70" selection-start-column="3" selection-end-line="71" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweet-auth/sweet-auth-service/src/main/java/com/sea/auth/service/AuthService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="36" column="79" lean-forward="true" selection-start-line="36" selection-start-column="79" selection-end-line="36" selection-end-column="79" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweet-upms/sweet-upms-service/src/main/java/com/sea/upms/web/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="66" column="20" lean-forward="true" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweet-auth/sweet-auth-common/src/main/java/com/sea/auth/entity/UserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sweet-auth/sweet-auth-service/src/main/java/com/sea/auth/web/AuthController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
+        <state relative-caret-position="-358">
+          <caret line="28" column="27" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
