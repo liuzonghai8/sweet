@@ -1,5 +1,6 @@
 package api;
 
+import com.sea.upms.vo.UserVo;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -23,6 +24,11 @@ public interface UserApi {
             @RequestParam("username") String username,
             @RequestParam("password") String password
     );
+
+    @GetMapping("/{id}")
+    UserVo findUserAllInfo(@PathVariable("id") Long userid);
+
+
     @GetMapping("test")
      String test();
 }

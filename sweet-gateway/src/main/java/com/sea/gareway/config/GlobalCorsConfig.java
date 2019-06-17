@@ -16,7 +16,7 @@ public class GlobalCorsConfig {
         config.addAllowedOrigin("http://www.sweet.com");
         config.addAllowedOrigin("http://api.sweet.com");
        // config.addAllowedOrigin("http://192.168.10.119");
-        config.addAllowedOrigin("http://192.168.1.119");
+        //config.addAllowedOrigin("http://192.168.1.119");
        // config.addAllowedOrigin("http://192.168.1.119:8080");
        // config.addAllowedOrigin("http://192.168.1.118");
         //2) 是否发送Cookie信息

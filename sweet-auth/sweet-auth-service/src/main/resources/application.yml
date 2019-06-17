@@ -20,6 +20,6 @@ sea:
     secret: sea@Login(Auth}*^31)&sweet%+-sea # 登录校验的密钥
     pubKeyPath: E:/bystander/id_rsa.pub # 公钥地址
     priKeyPath: E:/bystander/id_rsa.pri # 私钥地址
-    expire: 30 # 过期时间,单位分钟
+    expire: 30000 # 过期时间,单位分钟
     cookieName: SWEET_TOKEN
-    cookieMaxAge: 1800
+    cookieMaxAge: 1800000

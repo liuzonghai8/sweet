@@ -44,3 +44,5 @@ sea:
       allowPaths:
         - /api/auth/login
         - /api/auth/logout
+        - /api/auth/userInfo
+#        - /api/auth/userInfo/{id}

@@ -1,9 +1,11 @@
 package com.sea.auth.service;
 
+import com.sea.auth.entity.ResultAuth;
 import com.sea.auth.entity.UserInfo;
 import com.sea.auth.properties.JwtProperties;
 import com.sea.auth.utils.JwtUtils;
 import com.sea.upms.pojo.User;
+import com.sea.upms.vo.UserVo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -26,7 +28,7 @@ public class AuthService {
     private JwtProperties props;
 
 
-    public String login(String username, String password) {
+    public ResultAuth login(String username, String password) {
         log.info("------前端传输过来的username:{}，AND Password：{}-------",username,password);
         try {
             User user = userClient.queryUser(username, password);
@@ -35,13 +37,20 @@ public class AuthService {
                 return null;
             }
             UserInfo userInfo = new UserInfo(user.getId(), user.getUsername());
+            ResultAuth resultAuth = new ResultAuth();
+            resultAuth.setUserInfo(userInfo);
             //生成Token
             String token = JwtUtils.generateToken(userInfo, props.getPrivateKey(), props.getExpire());
             log.info("----生成的token为：{}------",token);
-            return token;
+           resultAuth.setToken(token);
+            return resultAuth;
         } catch (Exception e) {
             log.error("【授权中心】用户名和密码错误，用户名：{}", username,e);
             throw new RuntimeException(e); //LyException(ExceptionEnum.USERNAME_OR_PASSWORD_ERROR);
         }
+    }
+
+    public UserVo getUserInfo(Long userid) {
+        return userClient.findUserAllInfo(userid);
     }
 }
